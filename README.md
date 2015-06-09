@@ -1,2 +1,0 @@
-# anSim
-assignment AnSim
