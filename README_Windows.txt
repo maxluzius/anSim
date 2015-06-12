@@ -4,7 +4,6 @@ Betriebssystem: Windows
 OpenGLProject enthält alles, was Sie zur Erstellung von Programmen mit OpenGL 3.3 oder höher unter Windows benötigen.
 
 
-#HALLO
 Voraussetzungen:
 ------------------------------------------
 - CMake muss installiert sein und das Verzeichnis von cmake.exe im PATH eingetragen sein.
