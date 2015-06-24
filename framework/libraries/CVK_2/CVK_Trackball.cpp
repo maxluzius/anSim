@@ -5,6 +5,7 @@ CVK::Trackball::Trackball( int width, int height, CVK::Projection *projection)
 	m_cameraPos = glm::vec3(0.0f, 0.0f, 5.0);
 	m_center = glm::vec3( 0.0f, 0.0f, 0.0f);
 	m_up = glm::vec3(0.0f, 1.0f, 0.0f);
+	m_cameraView = glm::vec3(0.0f,0.0f,0.0f);
 
 	m_width = width;
 	m_height = height;
@@ -27,6 +28,7 @@ CVK::Trackball::Trackball( int width, int height)
 	m_cameraPos = glm::vec3(0.0f, 0.0f, 5.0);
 	m_center = glm::vec3( 0.0f, 0.0f, 0.0f);
 	m_up = glm::vec3(0.0f, 1.0f, 0.0f);
+	m_cameraView = glm::vec3(0.0f,0.0f,0.0f);
 
 	m_width = width;
 	m_height = height;
@@ -78,11 +80,11 @@ void CVK::Trackball::update( GLFWwindow* window)
 		m_radius += 0.1f;
 	if (m_radius < 0.1f) m_radius = 0.1f;
 
-	m_cameraPos.x = m_center.x + m_radius * sin(m_theta) * sin(m_phi);
-	m_cameraPos.y = m_center.y + m_radius * cos(m_theta);
-	m_cameraPos.z = m_center.z + m_radius * sin(m_theta) * cos(m_phi);
+	m_cameraPos.x = m_center.x + m_radius * sin(m_theta) * sin(m_phi) + m_cameraView.x;
+	m_cameraPos.y = m_center.y + m_radius * cos(m_theta) + m_cameraView.y;
+	m_cameraPos.z = m_center.z + m_radius * sin(m_theta) * cos(m_phi) + m_cameraView.z;
 
-	m_viewmatrix = glm::lookAt( m_cameraPos, m_center, m_up); 
+	m_viewmatrix = glm::lookAt( m_cameraPos, m_center, m_up); //eye where the camPosition is, center where u look at
 }
 
 void CVK::Trackball::setCenter( glm::vec3 *center)
@@ -93,6 +95,11 @@ void CVK::Trackball::setCenter( glm::vec3 *center)
 void CVK::Trackball::setRadius( float radius)
 {
 	m_radius = radius;
+}
+
+void CVK::Trackball::setPosition( glm::vec3 *position)
+{
+	m_cameraView = *position;
 }
 
 void CVK::Trackball::setUpvector( glm::vec3 *up)

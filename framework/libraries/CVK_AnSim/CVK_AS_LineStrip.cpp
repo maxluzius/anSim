@@ -16,7 +16,6 @@ void CVK::LineStrip::render(CVK::ShaderLineRender* shader)
 	shader->update(color);
 
 	glBindVertexArray(m_vao);
-
 	glDrawArrays(GL_LINE_STRIP, 0, m_points.size());
 
 	glBindVertexArray(0);

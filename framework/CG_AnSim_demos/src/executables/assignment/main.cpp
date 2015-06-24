@@ -19,6 +19,9 @@ CVK::Trackball cam_trackball( WIDTH, HEIGHT, &projection);
 
 CVK::HermiteSpline *mPath;
 CVK::LineStrip* line;
+std::vector<glm::vec3> *mVertices;
+std::vector<glm::vec3> *mTangents;
+int count = 0;
 
 
 void resizeCallback( GLFWwindow *window, int w, int h)
@@ -31,23 +34,23 @@ void resizeCallback( GLFWwindow *window, int w, int h)
 void init_camera()
 {
 	//Camera
-	glm::vec3 v( 0.0f, 0.0f, 0.0f);
+	glm::vec3 v( 0.0f);
 	cam_trackball.setCenter( &v);
-	cam_trackball.setRadius( 5);
+	cam_trackball.setRadius( 0);
 	CVK::State::getInstance()->setCamera( &cam_trackball);
 }
 
 void init_scene()
 {
 	mPath = new CVK::HermiteSpline();
-
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0, 0.0, -5.0), glm::vec3(1.5, 5.0, 0.0)));
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-3.0, 1.5, -1.0), glm::vec3(0.7, 4.0, 0.0)));
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(1.0, 2.0, 2.0), glm::vec3(0.3, -4.5, 0.0)));
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0, 1.0, 5.0), glm::vec3(-0.3, 3.5, 0.0)));
+	mVertices = mPath->getVerticesPtr();
+	mTangents = mPath->getTangentsPtr();
 
 	mPath->generateRenderVertices();
-
 	line = new CVK::LineStrip();
 	line->setColor(glm::vec4(1,0,0,1));
 
@@ -86,8 +89,8 @@ int main()
 	CVK::ShaderLineRender lineShader(VERTEX_SHADER_BIT | FRAGMENT_SHADER_BIT, shadernames2);
 	CVK::State::getInstance()->setShader(&lineShader);
 
-	init_camera();
 	init_scene();
+	init_camera();
 
 	glLineWidth(6);
 
@@ -97,7 +100,15 @@ int main()
 	{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		
-		//Update Camera
+		//Update Camera and following the spline by pressing space
+		if (glfwGetKey( window, GLFW_KEY_SPACE) == GLFW_PRESS)   {
+			if(count == mVertices->size()){
+				count = 0;
+			}
+			cam_trackball.setCenter(&mVertices->at(count));
+			cam_trackball.setPosition(&mTangents->at(count));
+			count++;
+		}
 		cam_trackball.update( window);
 
 		CVK::State::getInstance()->setShader(&lineShader);

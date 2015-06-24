@@ -13,7 +13,7 @@ CVK::HermiteSpline::~HermiteSpline()
 void CVK::HermiteSpline::generateRenderVertices(){
 	std::vector<HermiteSplineControlPoint*>::iterator cpIt = mControlPoints.begin();
 	while(cpIt != mControlPoints.end() - 1){
-		sampleHermiteSpline(*cpIt, *(cpIt + 1), 32); 
+		sampleHermiteSpline(*cpIt, *(cpIt + 1), 100);
 		cpIt++;
 	}
 }
@@ -26,6 +26,7 @@ void CVK::HermiteSpline::sampleHermiteSpline(HermiteSplineControlPoint* c0, Herm
 		glm::vec3 position, tangent;
 		evaluateHermiteSpline((float) i/(numVerts-1),c0, c1, position, tangent);
 		mVertices.push_back(position);
+		mTangents.push_back(tangent);
 	}
 }
 
@@ -47,8 +48,8 @@ void CVK::HermiteSpline::deCasteljau(float t, std::vector<glm::vec3> &cp, glm::v
 	if(cp.size() == 2)
 	{
 		point = (1-t) * cp.at(0) + t * cp.at(1);
-		tangent = cp.at(1) - cp.at(0);
-		tangent = glm::normalize(tangent);
+		tangent = cp.at(0) - cp.at(1);
+		//tangent = glm::normalize(tangent);
 	}
 	else
 	{

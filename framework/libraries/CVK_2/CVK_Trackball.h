@@ -17,10 +17,11 @@ public:
 	void update( GLFWwindow* window);
 	void setCenter( glm::vec3 *center);
 	void setRadius( float radius);
+	void setPosition(glm::vec3 *position);
 	void setUpvector( glm::vec3 *up);
 
 private:
-	glm::vec3 m_cameraPos, m_center, m_up;
+	glm::vec3 m_cameraPos, m_center, m_up, m_cameraView;
 
 	float m_oldX, m_oldY;
 	float m_sensitivity;
