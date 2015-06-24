@@ -1,0 +1,4 @@
+/Users/max/Desktop/Dev/assignment/CVK_AnSim/framework/CG_AnSim_demos/BUILD_Eclipse/libraries/CVK_2/CMakeFiles/CVK_2.dir
+/Users/max/Desktop/Dev/assignment/CVK_AnSim/framework/CG_AnSim_demos/BUILD_Eclipse/executables/assignment/CMakeFiles/assignment.dir
+/Users/max/Desktop/Dev/assignment/CVK_AnSim/framework/CG_AnSim_demos/BUILD_Eclipse/shaders/CMakeFiles/SHADERS.dir
+/Users/max/Desktop/Dev/assignment/CVK_AnSim/framework/CG_AnSim_demos/BUILD_Eclipse/libraries/CVK_AnSim/CMakeFiles/CVK_AnSim.dir
