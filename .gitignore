@@ -1,0 +1,14 @@
+# anSim
+
+dependencies_osx/*
+dependencies_win32/*
+scripts/*
+README_MacOSX.txt
+README_Windows.txt
+setup.bat
+setupmac.sh
+
+framework/resources/*
+framework/cmake/*
+framework/CG_AnSim_demos/BUILD_Eclipse/*
+framework/CG_AnSim_demos/src/CMakeLists.txt
