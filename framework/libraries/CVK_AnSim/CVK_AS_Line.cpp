@@ -36,7 +36,7 @@ void CVK::Line::render(CVK::ShaderLineRender* shader)
 	glm::vec4 color = getColor();
 	shader->update(color);
 
-	glBindVertexArray(m_vao);
+	glBindVertexArray(m_vao[0]);
 
 	glDrawArrays(GL_LINES, 0, 2);
 
@@ -48,7 +48,7 @@ void CVK::Line::setVertices()
 	std::vector<glm::vec4> vertices;
 	vertices.push_back(glm::vec4(mStart, 1.0f));
 	vertices.push_back(glm::vec4(mEnd, 1.0f));
-	glBindBuffer(GL_ARRAY_BUFFER, m_vertexBuffer);
+	glBindBuffer(GL_ARRAY_BUFFER, m_vertexBuffer[0]);
 	glBufferData(GL_ARRAY_BUFFER, 2 * sizeof(glm::vec4), &vertices[0], GL_STATIC_DRAW);
 }
 

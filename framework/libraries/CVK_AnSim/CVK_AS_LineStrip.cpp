@@ -15,8 +15,7 @@ void CVK::LineStrip::render(CVK::ShaderLineRender* shader)
 	glm::vec4 color = getColor();
 	shader->update(color);
 
-	glBindVertexArray(m_vao);
-
+	glBindVertexArray(m_vao[0]);
 	glDrawArrays(GL_LINE_STRIP, 0, m_points.size());
 
 	glBindVertexArray(0);
@@ -29,6 +28,6 @@ void CVK::LineStrip::setVertices()
 	{
 		vertices.push_back(glm::vec4(m_points[i], 1.0f));
 	}
-	glBindBuffer(GL_ARRAY_BUFFER, m_vertexBuffer);
+	glBindBuffer(GL_ARRAY_BUFFER, m_vertexBuffer[0]);
 	glBufferData(GL_ARRAY_BUFFER, m_points.size() * sizeof(glm::vec4), &vertices[0], GL_STATIC_DRAW);
 }

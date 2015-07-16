@@ -15,12 +15,12 @@ CVK::Trackball::Trackball( int width, int height, CVK::Projection *projection)
 	m_phi = 0.f;
 	m_radius = 1.5;
 
-	m_viewmatrix = glm::lookAt( m_center + m_cameraPos, m_center, m_up);
+	m_viewmatrix = glm::lookAt( m_center + m_cameraPos, m_center, m_up);   
 
 	m_oldX = width/2.f;
 	m_oldY = height/2.f;
 
-	setProjection( projection);
+    setProjection( projection);
 }
 
 CVK::Trackball::Trackball( int width, int height)
@@ -38,7 +38,7 @@ CVK::Trackball::Trackball( int width, int height)
 	m_phi = 0.f;
 	m_radius = 1.5;
 
-	m_viewmatrix = glm::lookAt( m_center + m_cameraPos, m_center, m_up);
+	m_viewmatrix = glm::lookAt( m_center + m_cameraPos, m_center, m_up);   
 
 	m_oldX = width/2.f;
 	m_oldY = height/2.f;
@@ -56,9 +56,9 @@ void CVK::Trackball::update( GLFWwindow* window)
 {
 	double x, y;
 
-	glfwGetCursorPos( window, &x, &y);
+	glfwGetCursorPos( window, &x, &y);  
 	if (glfwGetMouseButton( window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
-	{
+	{	
 		float changeX = ((float) x - m_oldX) * m_sensitivity;
 		float changeY = ((float) y - m_oldY) * m_sensitivity;
 
@@ -66,7 +66,7 @@ void CVK::Trackball::update( GLFWwindow* window)
 		if (m_theta < 0.01f) m_theta = 0.01f;
 		else if (m_theta > glm::pi<float>() - 0.01f) m_theta = glm::pi<float>() - 0.01f;
 
-		m_phi -= changeX;
+		m_phi -= changeX;	
 		if (m_phi < 0) m_phi += 2*glm::pi<float>();
 		else if (m_phi > 2*glm::pi<float>()) m_phi -= 2*glm::pi<float>();
 	}
@@ -74,9 +74,9 @@ void CVK::Trackball::update( GLFWwindow* window)
 	m_oldX = (float) x;
 	m_oldY = (float) y;
 
-	if (glfwGetKey( window, GLFW_KEY_UP) == GLFW_PRESS)
+	if (glfwGetKey( window, GLFW_KEY_UP) == GLFW_PRESS)            
 		m_radius -= 0.1f;
-	if (glfwGetKey( window, GLFW_KEY_DOWN) == GLFW_PRESS)
+	if (glfwGetKey( window, GLFW_KEY_DOWN) == GLFW_PRESS) 
 		m_radius += 0.1f;
 	if (m_radius < 0.1f) m_radius = 0.1f;
 
@@ -84,7 +84,7 @@ void CVK::Trackball::update( GLFWwindow* window)
 	m_cameraPos.y = m_center.y + m_radius * cos(m_theta) + m_cameraView.y;
 	m_cameraPos.z = m_center.z + m_radius * sin(m_theta) * cos(m_phi) + m_cameraView.z;
 
-	m_viewmatrix = glm::lookAt( m_cameraPos, m_center, m_up); //eye where the camPosition is, center where u look at
+	m_viewmatrix = glm::lookAt( m_cameraPos + glm::vec3(0.0,0.5,0.0), m_center + glm::vec3(0.0,0.5,0.0), m_up); //eye where the camPosition is, center where u look at
 }
 
 void CVK::Trackball::setCenter( glm::vec3 *center)

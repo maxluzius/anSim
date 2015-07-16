@@ -22,7 +22,7 @@ public:
 	inline glm::vec4 getColor() { return m_color; }
 
 protected:
-	GLuint m_vertexBuffer, m_vao;
+	GLuint m_vertexBuffer[4], m_vao[4];
 
 private:
 	glm::vec4 m_color;

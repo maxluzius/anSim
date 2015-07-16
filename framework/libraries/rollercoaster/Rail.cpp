@@ -52,7 +52,12 @@ void CVK::Rail::create()
 		m_uvs.push_back(glm::vec2(0.0,1.0));
 		m_index.push_back(i + m_stripL.size() + m_stripR.size() + m_stripM.size());
 	}
-
+//	for (int i = 0; i < m_pillarsT.size(); i++) {
+//		m_vertices.push_back(m_pillarsT.at(i));
+//		m_normals.push_back(glm::vec3(1.0));
+//		m_uvs.push_back(glm::vec2(0.0,1.0));
+//		m_index.push_back(i + m_stripL.size() + m_stripR.size() + m_stripM.size() + m_connect.size());
+//	}
 
 }
 
