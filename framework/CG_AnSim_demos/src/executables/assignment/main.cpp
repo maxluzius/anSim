@@ -6,19 +6,30 @@
 #include <CVK_AnSim/CVK_AS_CoordinateSystem.h>
 #include <CVK_AnSim/CVK_AS_HermiteSpline.h>
 #include <CVK_AnSim/CVK_AS_LineStrip.h>
+#include <rollercoaster/Rail.h>
 
 #define WIDTH 800
 #define HEIGHT 800
 
 GLFWwindow* window;
 
+CVK::Node *scene_node;
+
 //define Camera (Trackball)
 CVK::Perspective projection( 60.0f, WIDTH / (float) HEIGHT, 0.1f, 100.f);
 CVK::Trackball cam_trackball( WIDTH, HEIGHT, &projection);
 
+//define Lights
+CVK::Light *plight;
+
+//define materials
+CVK::Material *mat_red;
+
+float shininess = 100.0f;
 
 CVK::HermiteSpline *mPath;
 CVK::LineStrip* line;
+CVK::Rail* rail;
 std::vector<glm::vec3> *mVertices;
 std::vector<glm::vec3> *mTangents;
 int count = 0;
@@ -40,30 +51,40 @@ void init_camera()
 	CVK::State::getInstance()->setCamera( &cam_trackball);
 }
 
+void init_materials()
+{
+	mat_red = new CVK::Material(red, white, shininess);
+}
+
 void init_scene()
 {
+	scene_node = new CVK::Node( "Scene");
+
 	mPath = new CVK::HermiteSpline();
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0, 0.0, -5.0), glm::vec3(1.5, 5.0, 0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-3.0, 1.5, -1.0), glm::vec3(0.7, 4.0, 0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(1.0, 2.0, 2.0), glm::vec3(0.3, -4.5, 0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0, 1.0, 5.0), glm::vec3(-0.3, 3.5, 0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0, 1.0, 0.0), glm::vec3(0.0, 4.0, -5.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0, 4.0, -5.0), glm::vec3(5.0, 1.0, 0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0, 1.0, 0.0), glm::vec3(0.0, 6.0, 5.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0, 6.0, 5.0), glm::vec3(-5.0, 1.0, 0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0, 1.0, 0.0), glm::vec3(0.0, 4.0, -5.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0, 4.0, -5.0), glm::vec3(5.0, 1.0, 0.0)));
 	mVertices = mPath->getVerticesPtr();
 	mTangents = mPath->getTangentsPtr();
 
 	mPath->generateRenderVertices();
-	line = new CVK::LineStrip();
-	line->setColor(glm::vec4(1,0,0,1));
 
-	for(int i = 0; i < mPath->getVerticesPtr()->size(); i++)
-	{
-		line->addPoint(mPath->getVerticesPtr()->at(i));
+	//for a hermitSplineRail
+	rail = new CVK::Rail();
+ 	for (int i = 0; i < mPath->getVerticesPtr()->size(); i++) {
+		rail->addPoint(mPath->getVerticesPtr()->at(i));
+		rail->addTangent(mPath->getTangentsPtr()->at(i), mPath->getVerticesPtr()->size());
 	}
-}
 
-void drawHermiteSpline(CVK::ShaderLineRender *shader)
-{
-	//TODO
-	line->render(shader);
+	CVK::Node *rail_node_up = new CVK::Node("Rail_up");
+	rail_node_up->setModelMatrix( glm::translate(glm::mat4( 1.0f), glm::vec3( 0, 0, 0)));
+	rail_node_up->setMaterial( mat_red);
+	rail_node_up->setGeometry( rail);
+	scene_node->addChild( rail_node_up);
+
 }
 
 int main() 
@@ -85,12 +106,21 @@ int main()
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  
 
 	//load, compile and link Shader
+	const char *shadernames[2] = { SHADERS_PATH "/Phong.vert", SHADERS_PATH "/Phong.frag" };
+	CVK::ShaderPhong phongShader(VERTEX_SHADER_BIT | FRAGMENT_SHADER_BIT, shadernames);
+	CVK::State::getInstance()->setShader(&phongShader);
 	const char *shadernames2[2] = { SHADERS_PATH "/ColorMVPShader.vert", SHADERS_PATH "/ColorMVPShader.frag" };
 	CVK::ShaderLineRender lineShader(VERTEX_SHADER_BIT | FRAGMENT_SHADER_BIT, shadernames2);
 	CVK::State::getInstance()->setShader(&lineShader);
 
-	init_scene();
 	init_camera();
+	init_materials();
+	init_scene();
+
+	//define Light Sources
+	plight = new CVK::Light(glm::vec4(-1, 1, 1, 1), grey, glm::vec3(0, 0, 0), 1.0f, 0.0f);
+	CVK::State::getInstance()->addLight(plight);
+	CVK::State::getInstance()->updateSceneSettings(darkgrey, 0, white, 1, 10, 1);
 
 	glLineWidth(6);
 
@@ -102,7 +132,7 @@ int main()
 		
 		//Update Camera and following the spline by pressing space
 		if (glfwGetKey( window, GLFW_KEY_SPACE) == GLFW_PRESS)   {
-			if(count == mVertices->size()){
+			if(count == mPath->getVerticesPtr()->size()-100){
 				count = 0;
 			}
 			cam_trackball.setCenter(&mVertices->at(count));
@@ -111,13 +141,22 @@ int main()
 		}
 		cam_trackball.update( window);
 
+		//Use Shader and define camera uniforms
+		CVK::State::getInstance()->setShader(&phongShader);
+		phongShader.update();
+
+		//define Light uniforms
+		CVK::State::getInstance()->setLight( 0, plight);
+
+		scene_node->render();
+
+		glClear(GL_DEPTH_BUFFER_BIT);
 		CVK::State::getInstance()->setShader(&lineShader);
 		lineShader.update();
 		coords.render(&lineShader);
-		drawHermiteSpline(&lineShader);
 
 		glfwSwapBuffers( window);
-		glfwPollEvents();
+		glfwPollEvents();;
 	}
 	glfwDestroyWindow( window);
 	glfwTerminate();

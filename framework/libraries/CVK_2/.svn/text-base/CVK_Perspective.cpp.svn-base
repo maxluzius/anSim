@@ -2,7 +2,7 @@
 
 CVK::Perspective::Perspective( float ratio)
 {
-	m_fov = glm::radians(60.f);
+	m_fov = 60.f;
 	m_ratio = ratio;
 
 	m_znear = 0.001f;
@@ -12,7 +12,7 @@ CVK::Perspective::Perspective( float ratio)
 
 CVK::Perspective::Perspective( float fov, float ratio, float near, float far)
 {
-	m_fov = glm::radians(fov);
+	m_fov = fov;
 	m_ratio = ratio;
 
 	m_znear = near;
@@ -39,7 +39,7 @@ void CVK::Perspective::setNearFar( float near, float far)
 
 void CVK::Perspective::setFov( float fov)
 {
-	m_fov = glm::radians(fov);
+	m_fov = fov;
 	setPerspective( m_fov, m_ratio, m_znear, m_zfar);  
 }
 

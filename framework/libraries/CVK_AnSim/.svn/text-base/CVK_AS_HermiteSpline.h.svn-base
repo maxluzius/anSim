@@ -32,12 +32,10 @@ public:
 	inline void addControlPoint(HermiteSplineControlPoint* c)				{ mControlPoints.push_back(c); }
 	inline std::vector<HermiteSplineControlPoint*>* getControlPointsPtr()	{ return &mControlPoints; }
 	inline std::vector<glm::vec3>* getVerticesPtr()							{ return &mVertices; }
-	std::vector<glm::vec3>* getTangentsPtr(){ return &mTangents; }
 
 private:
 	std::vector<HermiteSplineControlPoint*> mControlPoints;
 	std::vector<glm::vec3> mVertices;
-	std::vector<glm::vec3> mTangents;
 	//********************************************************************************
 	std::vector<ArcLengthTableEntry> mArcLengthTable;
 	//********************************************************************************

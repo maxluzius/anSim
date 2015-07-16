@@ -1,0 +1,353 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2
+END
+Teapot.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/Teapot.h
+END
+CVK_Plane.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Plane.cpp
+END
+CVK_CompatibilityTools.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_CompatibilityTools.h
+END
+CVK_Trackball.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Trackball.cpp
+END
+CVK_Ortho.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Ortho.h
+END
+CVK_Geometry.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Geometry.h
+END
+CVK_Teapot.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Teapot.h
+END
+CVK_CubeMapTexture.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_CubeMapTexture.h
+END
+CVK_Material.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Material.h
+END
+CVK_Texture.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Texture.h
+END
+CVK_Triangle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Triangle.cpp
+END
+CVK_ShaderSimpleTexture.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_ShaderSimpleTexture.h
+END
+CVK_ShaderPhong.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_ShaderPhong.h
+END
+CVK_FBO.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_FBO.h
+END
+CVK_Light.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Light.h
+END
+CVK_ShaderMinimal.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_ShaderMinimal.cpp
+END
+CVK_Cube.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Cube.cpp
+END
+CVK_ShaderPostProcessing.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_ShaderPostProcessing.h
+END
+CVK_State.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_State.cpp
+END
+CVK_Projection.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Projection.h
+END
+CVK_Cone.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Cone.cpp
+END
+CVK_Defs.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Defs.h
+END
+CVK_Pilotview.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Pilotview.h
+END
+CVK_ShaderSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_ShaderSet.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CMakeLists.txt
+END
+CVK_Node.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Node.h
+END
+CVK_CompatibilityTools.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_CompatibilityTools.cpp
+END
+CVK_Ortho.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Ortho.cpp
+END
+CVK_Geometry.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Geometry.cpp
+END
+CVK_Sphere.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Sphere.h
+END
+CVK_Teapot.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Teapot.cpp
+END
+stb_image.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/stb_image.h
+END
+CVK_Camera.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Camera.h
+END
+CVK_CubeMapTexture.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_CubeMapTexture.cpp
+END
+CVK_Perspective.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Perspective.h
+END
+CVK_Material.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Material.cpp
+END
+CVK_Texture.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Texture.cpp
+END
+CVK_ShaderSimpleTexture.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_ShaderSimpleTexture.cpp
+END
+CVK_Framework.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Framework.h
+END
+CVK_ShaderPhong.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_ShaderPhong.cpp
+END
+CVK_Plane.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Plane.h
+END
+CVK_Trackball.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Trackball.h
+END
+CVK_FBO.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_FBO.cpp
+END
+CVK_Light.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Light.cpp
+END
+CVK_ShaderPostProcessing.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_ShaderPostProcessing.cpp
+END
+CVK_Triangle.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Triangle.h
+END
+CVK_Projection.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Projection.cpp
+END
+CVK_Pilotview.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Pilotview.cpp
+END
+CVK_ShaderMinimal.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_ShaderMinimal.h
+END
+CVK_ShaderSet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_ShaderSet.cpp
+END
+CVK_Cube.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Cube.h
+END
+CVK_Node.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Node.cpp
+END
+CVK_State.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_State.h
+END
+CVK_Sphere.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Sphere.cpp
+END
+stb_image.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/stb_image.cpp
+END
+CVK_Camera.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Camera.cpp
+END
+CVK_Perspective.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Perspective.cpp
+END
+CVK_Cone.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_2/CVK_Cone.h
+END

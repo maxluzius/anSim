@@ -22,29 +22,40 @@ CVK::Rail::~Rail()
 
 }
 
-void CVK::Rail::render(CVK::ShaderLineRender* shader)
+void CVK::Rail::create()
 {
-	glm::vec4 color = getColor();
-	shader->update(color);
+	m_points = m_stripL.size() + m_stripM.size() + m_stripR.size() + m_connect.size();
+	m_indices = m_points;
 
-	glBindVertexArray(m_vao[0]);
-	glDrawArrays(GL_TRIANGLES, 0, m_stripR.size());
-	glBindVertexArray(0);
+	for (int i = 0; i < m_stripL.size(); i++) {
+		m_vertices.push_back(m_stripL.at(i));
+		m_normals.push_back(glm::vec3(1.0));
+		m_uvs.push_back(glm::vec2(0.0,1.0));
+		m_index.push_back(i);
 
-	glBindVertexArray(m_vao[1]);
-	glDrawArrays(GL_TRIANGLES, 0, m_stripL.size());
-	glBindVertexArray(0);
+	}
+	for (int i = 0; i < m_stripR.size(); i++) {
+		m_vertices.push_back(m_stripR.at(i));
+		m_normals.push_back(glm::vec3(1.0));
+		m_uvs.push_back(glm::vec2(0.0,1.0));
+		m_index.push_back(i + m_stripL.size());
+	}
+	for (int i = 0; i < m_stripM.size(); i++) {
+		m_vertices.push_back(m_stripM.at(i));
+		m_normals.push_back(glm::vec3(1.0));
+		m_uvs.push_back(glm::vec2(0.0,1.0));
+		m_index.push_back(i + m_stripL.size() + m_stripR.size());
+	}
+	for (int i = 0; i < m_connect.size(); i++) {
+		m_vertices.push_back(m_connect.at(i));
+		m_normals.push_back(glm::vec3(1.0));
+		m_uvs.push_back(glm::vec2(0.0,1.0));
+		m_index.push_back(i + m_stripL.size() + m_stripR.size() + m_stripM.size());
+	}
 
-	color = glm::vec4(0.0,0.0,0.0,1.0);
-	shader->update(color);
-	glBindVertexArray(m_vao[2]);
-	glDrawArrays(GL_TRIANGLES, 0, m_stripM.size());
-	glBindVertexArray(0);
 
-	glBindVertexArray(m_vao[3]);
-	glDrawArrays(GL_TRIANGLES, 0, m_connect.size());
-	glBindVertexArray(0);
 }
+
 
 void CVK::Rail::calculatePipe()
 {	//go over m_positions draw circle to tangent direction and triangle_strip to next points circle
@@ -63,9 +74,9 @@ void CVK::Rail::calculatePipe()
 	vec.operator/=(1.0/rad);
 	for (int j = 0; j < circle+1; j++) {
 		//axis we rotate around
-		aiQuaternion axis(aiVector3D(m_tangents.at(count).x, m_tangents.at(count).y, m_tangents.at(count).z),
+		aiQuaternion q_axis(aiVector3D(m_tangents.at(count).x, m_tangents.at(count).y, m_tangents.at(count).z),
 						  2*PI * j / circle);
-		tmp = axis.Rotate(vec);
+		tmp = q_axis.Rotate(vec);
 		glm::vec3 out(tmp.x + m_positions.at(count).x, tmp.y + m_positions.at(count).y, tmp.z + m_positions.at(count).z);
 		m_pipeR.push_back(glm::vec4(out + ortho, 1.0));
 		m_pipeL.push_back(glm::vec4(out - ortho, 1.0));
@@ -120,6 +131,18 @@ void CVK::Rail::calculatePipe()
 		m_connect.push_back(glm::vec4(tangent + vector - up, 1.0));
 
 	}
+	if(count%50 == 0){
+		aiVector3D xAxis(1.0,0.0,0.0);
+		for (int i = 0; i < circle + 1; i++) {
+			aiQuaternion q_yAxis(0.0,1.0,0.0, 2 * PI * i * circle);
+			tmp = q_yAxis.Rotate(xAxis);
+			for (int j = 0; j < m_positions.at(count).y; ++j) {
+				glm::vec4 out(tmp.x + m_positions.at(count).x, tmp.y + m_positions.at(count).y - (float) j, tmp.z + m_positions.at(count).z, 1.0);
+				m_pillars.push_back(out);
+			}
+		}
+
+	}
 
 	//after all circles of the pipe are calculatet we can set their order to render them
 	if(m_positions.size() == num) { //6 points, between each pair 100 points = 5 * 100
@@ -130,6 +153,18 @@ void CVK::Rail::calculatePipe()
 
 void CVK::Rail::setTriangleStrip()
 {
+	for (int i = 0; i < m_pillars.size()-(2*circle+2); i += circle+1) {
+		for (int j = 0; j < circle+1; j++) {
+			m_pillarsT.push_back(m_pillars.at(j+i));
+			m_pillarsT.push_back(m_pillars.at(j+i+circle+1));
+			m_pillarsT.push_back(m_pillars.at(j+i+1));
+		}
+		for (int k = 0; k < circle+1; k++) {
+			m_pillarsT.push_back(m_pillars.at(i+k+circle+1));
+			m_pillarsT.push_back(m_pillars.at(i+k+1));
+			m_pillarsT.push_back(m_pillars.at(i+k+circle+2));
+		}
+	}
 	for (int i = 0; i < m_pipeR.size()-(2*circle+2); i += circle+1) {
 		for (int j = 0; j < circle+1; j++) {
 			m_stripR.push_back(m_pipeR.at(j+i));
@@ -154,25 +189,7 @@ void CVK::Rail::setTriangleStrip()
 			m_stripM.push_back(m_pipeM.at(i+k+circle+2));
 		}
 	}
+
+	create();
+	createBuffers();
 }
-
-void CVK::Rail::setVertices()
-{
-
-
-	glBindBuffer(GL_ARRAY_BUFFER, m_vertexBuffer[0]);
-	glBufferData(GL_ARRAY_BUFFER, m_stripR.size() * sizeof(glm::vec4), &m_stripR[0], GL_STATIC_DRAW);
-
-	glBindBuffer(GL_ARRAY_BUFFER, m_vertexBuffer[1]);
-	glBufferData(GL_ARRAY_BUFFER, m_stripL.size() * sizeof(glm::vec4), &m_stripL[0], GL_STATIC_DRAW);
-
-	glBindBuffer(GL_ARRAY_BUFFER, m_vertexBuffer[2]);
-	glBufferData(GL_ARRAY_BUFFER, m_stripM.size() * sizeof(glm::vec4), &m_stripM[0], GL_STATIC_DRAW);
-
-	glBindBuffer(GL_ARRAY_BUFFER, m_vertexBuffer[3]);
-	glBufferData(GL_ARRAY_BUFFER, m_connect.size() * sizeof(glm::vec4), &m_connect[0], GL_STATIC_DRAW);
-}
-
-
-
-

@@ -189,7 +189,6 @@ void CVK::HermiteSpline::sampleHermiteSpline(HermiteSplineControlPoint* c0, Herm
 		glm::vec3 position, tangent;
 		evaluateHermiteSpline((float) i/(numVerts-1),c0, c1, position, tangent);
 		mVertices.push_back(position);
-		mTangents.push_back(tangent);
 	}
 }
 

@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/cg/Lehre/!svn/ver/1064/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim
+END
+CVK_AS_Renderable.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/cg/Lehre/!svn/ver/1046/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_Renderable.h
+END
+CVK_AS_HermiteSpline.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/cg/Lehre/!svn/ver/1064/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_HermiteSpline.cpp
+END
+CVK_AS_LineStrip.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/cg/Lehre/!svn/ver/1046/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_LineStrip.cpp
+END
+CVK_AS_MassPoint.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/cg/Lehre/!svn/ver/1058/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_MassPoint.cpp
+END
+CVK_AS_HermiteSpline.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/cg/Lehre/!svn/ver/1053/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_HermiteSpline.h
+END
+CVK_AS_ShaderLineRender.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_ShaderLineRender.cpp
+END
+CVK_AS_LineStrip.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/cg/Lehre/!svn/ver/1046/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_LineStrip.h
+END
+CVK_AS_MassPoint.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/cg/Lehre/!svn/ver/1058/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_MassPoint.h
+END
+CVK_AS_ShaderSpace.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/cg/Lehre/!svn/ver/1060/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_ShaderSpace.cpp
+END
+CVK_AS_HermiteSplineControlPoint.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_HermiteSplineControlPoint.cpp
+END
+CVK_AS_ShaderLineRender.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_ShaderLineRender.h
+END
+CVK_AS_Line.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/cg/Lehre/!svn/ver/1046/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_Line.cpp
+END
+CVK_AS_ShaderSpace.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/cg/Lehre/!svn/ver/1060/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_ShaderSpace.h
+END
+CVK_AS_HermiteSplineControlPoint.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/cg/Lehre/!svn/ver/1046/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_HermiteSplineControlPoint.h
+END
+CVK_AS_Line.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/cg/Lehre/!svn/ver/1046/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_Line.h
+END
+CVK_AS_CoordinateSystem.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_CoordinateSystem.cpp
+END
+CVK_AS_CoordinateSystem.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/cg/Lehre/!svn/ver/1046/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_CoordinateSystem.h
+END
+CVK_AS_Renderable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CVK_AS_Renderable.cpp
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/cg/Lehre/!svn/ver/1044/AnSim/SS15/CVK_AnSim/framework/libraries/CVK_AnSim/CMakeLists.txt
+END
