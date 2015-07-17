@@ -26,17 +26,19 @@ public:
 
 private:
 	int num;
-	std::vector<glm::vec3> m_positions; //positions of vertices
-	std::vector<glm::vec3> m_tangents; //tangents of vertice
-	std::vector<glm::vec4> m_pipeR; //points to render circles at track right
-	std::vector<glm::vec4> m_pipeL; //points to render circles at track left
+	std::vector<glm::vec3> m_positions;
+	std::vector<glm::vec3> m_tangents;
+	std::vector<glm::vec4> m_pipeR; //points to render circles at track right/left/middle
+	std::vector<glm::vec4> m_pipeL;
 	std::vector<glm::vec4> m_pipeM;
-	std::vector<glm::vec4> m_stripR; //points to render trianglestrip right pipe
-	std::vector<glm::vec4> m_stripL; //points to render trianglestrip left pipe
-	std::vector<glm::vec4> m_stripM;
+	std::vector<glm::vec4> m_pillars; // points to render circles of pillars
+
+	//ordered vectors to render GL_TRIANGLES
+	std::vector<glm::vec4> m_pipeRT;
+	std::vector<glm::vec4> m_pipeLT;
+	std::vector<glm::vec4> m_pipeMT;
+	std::vector<glm::vec4> m_connectT;
 	std::vector<glm::vec4> m_pillarsT;
-	std::vector<glm::vec4> m_connect;
-	std::vector<glm::vec4> m_pillars;
 
 	void create();
 	void calculatePipe();
