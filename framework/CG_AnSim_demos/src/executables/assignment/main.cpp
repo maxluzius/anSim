@@ -32,6 +32,7 @@ CVK::LineStrip* line;
 CVK::Rail* rail;
 std::vector<glm::vec3> *mVertices;
 std::vector<glm::vec3> *mTangents;
+std::vector<glm::vec3> *mUp;
 int count = 0;
 
 
@@ -60,13 +61,48 @@ void init_scene()
 {
 	scene_node = new CVK::Node( "Scene");
 
+	//repeat the first two points at the end of the spline
 	mPath = new CVK::HermiteSpline();
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0, 1.0, 0.0), glm::vec3(0.0, 4.0, -5.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0, 4.0, -5.0), glm::vec3(5.0, 1.0, 0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0, 1.0, 0.0), glm::vec3(0.0, 6.0, 5.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0, 6.0, 5.0), glm::vec3(-5.0, 1.0, 0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0, 1.0, 0.0), glm::vec3(0.0, 4.0, -5.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0, 4.0, -5.0), glm::vec3(5.0, 1.0, 0.0)));
+	//testtrack1 with 4 points
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0, 1.0, 0.0), glm::vec3(0.0, 4.0, -5.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0, 4.0, -5.0), glm::vec3(5.0, 1.0, 0.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0, 1.0, 0.0), glm::vec3(0.0, 6.0, 5.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0, 6.0, 5.0), glm::vec3(-5.0, 1.0, 0.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0, 1.0, 0.0), glm::vec3(0.0, 4.0, -5.0)));
+	//testtrack1 ends here
+
+	//track2
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0,2.0,-5.0), glm::vec3(-10.0,8.0,0.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-10.0,8.0,0.0), glm::vec3(-5.0,1.0,5.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0,1.0,5.0), glm::vec3(1.0,2.0,8.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(1.0,2.0,8.0), glm::vec3(-2.0,8.0,6.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-2.0,8.0,6.0), glm::vec3(-4.0,3.0,3.0)));
+//	//
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-4.0,3.0,3.0), glm::vec3(5.0,2.0,7.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0,2.0,7.0), glm::vec3(10.0,1.0,4.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(10.0,1.0,4.0), glm::vec3(8.0,4.0,-4.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(8.0,4.0,-4.0), glm::vec3(4.0,6.0,-8.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(4.0,6.0,-8.0), glm::vec3(-5.0,2.0,-5.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0,2.0,-5.0), glm::vec3(-10.0,8.0,0.0)));
+	//track 2 ends here
+
+	//testtrack3 looping
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-10.0,5.0,1.0), glm::vec3(1.0,2.0,1.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(1.0,3.0,1.0), glm::vec3(5.0,0.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0,10.0,0.0), glm::vec3(-15.0,14.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(3.0,3.0,-1.0), glm::vec3(20.0,1.0,-1.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(20.0,1.0,-1.0), glm::vec3(-20.0,1.0,1.0)));
+	//testtrack3 ends here
+
+	//testtrack3 circle
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0,1.0,0.0), glm::vec3(10.0,1.0,0.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(10.0,1.0,0.0), glm::vec3(15.0,1.0,0.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0,0.0,0.0), glm::vec3(0.0,-5.0,0.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0,-5.0,0.0), glm::vec3(5.0,0.0,0.0)));
+//	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0,0.0,0.0), glm::vec3(0.0,5.0,0.0)));
+	//testtrack3 ends here
+
+
 	mVertices = mPath->getVerticesPtr();
 	mTangents = mPath->getTangentsPtr();
 
@@ -74,10 +110,12 @@ void init_scene()
 
 	//for a hermitSplineRail
 	rail = new CVK::Rail();
+	mUp = rail->getUpPtr();
  	for (int i = 0; i < mPath->getVerticesPtr()->size(); i++) {
 		rail->addPoint(mPath->getVerticesPtr()->at(i));
 		rail->addTangent(mPath->getTangentsPtr()->at(i), mPath->getVerticesPtr()->size());
 	}
+
 
 	CVK::Node *rail_node_up = new CVK::Node("Rail_up");
 	rail_node_up->setModelMatrix( glm::translate(glm::mat4( 1.0f), glm::vec3( 0, 0, 0)));
@@ -132,11 +170,12 @@ int main()
 		
 		//Update Camera and following the spline by pressing space
 		if (glfwGetKey( window, GLFW_KEY_SPACE) == GLFW_PRESS)   {
-			if(count == mPath->getVerticesPtr()->size()-100){
+			if(count == mPath->getVerticesPtr()->size()){
 				count = 0;
 			}
 			cam_trackball.setCenter(&mVertices->at(count));
 			cam_trackball.setPosition(&mTangents->at(count));
+			cam_trackball.setUpvector(&mUp->at(count));
 			count++;
 		}
 		cam_trackball.update( window);
