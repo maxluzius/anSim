@@ -23,11 +23,13 @@ public:
 
 	inline void addPoint(glm::vec3 point){ m_positions.push_back(point); }
 	inline void addTangent(glm::vec3 point, int number){this->num = number; m_tangents.push_back(point); calculatePipe();}
+	std::vector<glm::vec3>* getUpPtr(){ return &m_up; }
 
 private:
 	int num;
 	std::vector<glm::vec3> m_positions;
 	std::vector<glm::vec3> m_tangents;
+	std::vector<glm::vec3> m_up;
 	std::vector<glm::vec4> m_pipeR; //points to render circles at track right/left/middle
 	std::vector<glm::vec4> m_pipeL;
 	std::vector<glm::vec4> m_pipeM;

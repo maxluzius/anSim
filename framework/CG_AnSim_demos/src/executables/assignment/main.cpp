@@ -32,12 +32,13 @@ CVK::LineStrip* line;
 CVK::Rail* rail;
 std::vector<glm::vec3> *mVertices;
 std::vector<glm::vec3> *mTangents;
+std::vector<glm::vec3> *mUp;
 int count = 0;
 
 //*************************************************************************************************************
 float timeRunning 	= 0.0f;
 float position 		= 0.0f;
-float speed 		= 1.0f;
+float speed 		= 20.0f;
 glm::vec3 renderPosition 	= glm::vec3(0.0f,0.0f,0.0f);
 glm::vec3 tangent 		= glm::vec3(1.0f,0.0f,0.0f);
 glm::vec3 normal		= glm::vec3(0.0f,1.0f,0.0f);
@@ -48,6 +49,7 @@ float teapot_acceleration 	= 0.0f;
 float gravity 				= 9.81f;
 float F_g 					= teapot_mass * gravity;
 float F 					= 0.0f;
+int indexUp					= 0;
 glm::vec3 down				= glm::vec3(0.0f,-1.0f,0.0f);
 glm::vec3 curTangent;
 //*************************************************************************************************************
@@ -85,17 +87,18 @@ void updateTeapot(float d_t)
 								  renderPosition,
 								  t);
 
-
+	curTangent = t;
 
 	//Orientierung des Teapots mittels der Frenet Frame Methode
+	/*
 	mPath->calculateFrenetFrame(u,
 								 (*(mPath->getControlPointsPtr()))[patchNum],
 								 (*(mPath->getControlPointsPtr()))[patchNum + 1],
 								 tangent,
 								 binormal,
 								 normal);
-	curTangent = t;
-
+	*/
+	//tangent = t;
 }
 
 void resizeCallback( GLFWwindow *window, int w, int h)
@@ -124,15 +127,33 @@ void init_scene()
 	scene_node = new CVK::Node( "Scene" );
 
 	mPath = new CVK::HermiteSpline();
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0, 6.0, 5.0), glm::vec3(-5.0, 1.0, 0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0, 1.0, 0.0), glm::vec3(0.0, 4.0, -5.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0, 4.0, -5.0), glm::vec3(5.0, 1.0, 0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0, 1.0, 0.0), glm::vec3(0.0, 6.0, 5.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0, 6.0, 5.0), glm::vec3(-5.0, 1.0, 0.0)));
-	//mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0, 1.0, 0.0), glm::vec3(0.0, 4.0, -5.0)));
 
-	//mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0, 1.0, 0.0), glm::vec3(0.0, 4.0, -5.0)));
-	//mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0, 4.0, -5.0), glm::vec3(5.0, 1.0, 0.0)));
+	//start down the hill
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,15.0,1.0), glm::vec3(1.0,0.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-20.0,15.0,1.0), glm::vec3(2.0,-1.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-8.0,7.5,1.0), glm::vec3(10.0,-5.0,0.0)));
+	//looping
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(1.0,3.0,1.0), glm::vec3(10.0,3.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0,10.0,0.0), glm::vec3(-15.0,14.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(3.0,2.0,-1.0), glm::vec3(20.0,1.0,-1.0)));
+	//curve behind looping up the small hill
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(10.0,1.0,2.0), glm::vec3(10.0,-5.0,3.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(10.0,1.0,7.0), glm::vec3(-10.0,1.0,-5.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0,5.0,8.0), glm::vec3(-10.0,0.0,1.0)));
+	//down to the center and to the top of the last stage
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-2.0,2.0,0.0), glm::vec3(-5.0,5.0,-5.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-8.0,10.0,-8.0), glm::vec3(-5.0,3.0,-5.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-12.0,4.0,-13.0), glm::vec3(-5.0,-2.0,-5.0)));
+	//the bumb
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-20.0,4.0,-13.0), glm::vec3(-5.0,2.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,6.0,-13.0), glm::vec3(-5.0,0.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-35.0,3.0,-13.0), glm::vec3(-5.0,0.0,0.0)));
+	//last curve to the top
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-50.0,3.0,-13.0), glm::vec3(-10.0,0.0,5.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-50.0,3.0,-3.0), glm::vec3(5.0,3.0,5.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-35.0,15.0,1.0), glm::vec3(10.0,0.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,15.0,1.0), glm::vec3(1.0,0.0,0.0)));
+
 	mVertices = mPath->getVerticesPtr();
 	mTangents = mPath->getTangentsPtr();
 	mPath->generateRenderVertices();
@@ -142,6 +163,7 @@ void init_scene()
 
 	//for a hermitSplineRail
 	rail = new CVK::Rail();
+	mUp = rail->getUpPtr();
 	for (int i = 0; i < mPath->getVerticesPtr()->size(); i++) {
 		rail->addPoint(mPath->getVerticesPtr()->at(i));
 		rail->addTangent(mPath->getTangentsPtr()->at(i), mPath->getVerticesPtr()->size());
@@ -219,6 +241,7 @@ int main()
 			}
 			cam_trackball.setCenter(&mVertices->at(count));
 			cam_trackball.setPosition(&mTangents->at(count));
+			cam_trackball.setUpvector(&mUp->at(count));
 			count++;
 		}
 		cam_trackball.update( window);
