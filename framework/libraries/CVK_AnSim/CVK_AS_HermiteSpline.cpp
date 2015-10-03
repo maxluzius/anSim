@@ -1,4 +1,5 @@
 #include "CVK_AS_HermiteSpline.h"
+#include <iostream>
 
 #define ONE_THIRD (1.0f / 3.0f)
 #define THRESH 0.001f
@@ -137,6 +138,7 @@ void CVK::HermiteSpline::getParameterByArcLength(float length, float &u, int &pa
 				}
 			}
 		}
+		//std::cout << index << " u: " << u << " patchNum: " << patchNum << std::endl;
 	}
 }
 

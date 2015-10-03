@@ -34,11 +34,12 @@ std::vector<glm::vec3> *mVertices;
 std::vector<glm::vec3> *mTangents;
 std::vector<glm::vec3> *mUp;
 int count = 0;
+bool pressed = false;
 
 //*************************************************************************************************************
 float timeRunning 	= 0.0f;
 float position 		= 0.0f;
-float speed 		= 20.0f;
+float speed 		= 2.0f;
 glm::vec3 renderPosition 	= glm::vec3(0.0f,0.0f,0.0f);
 glm::vec3 tangent 		= glm::vec3(1.0f,0.0f,0.0f);
 glm::vec3 normal		= glm::vec3(0.0f,1.0f,0.0f);
@@ -66,7 +67,8 @@ void updateTeapot(float d_t)
 		teapot_acceleration = F / teapot_mass;
 		speed = teapot_acceleration * d_t + speed;
 
-		position = timeRunning * speed;
+		position += d_t * speed;
+
 
 
 	float u;
@@ -87,18 +89,23 @@ void updateTeapot(float d_t)
 								  renderPosition,
 								  t);
 
-	curTangent = t;
+	curTangent = mTangents->at((int)((u  + patchNum) * 100));
 
 	//Orientierung des Teapots mittels der Frenet Frame Methode
-	/*
-	mPath->calculateFrenetFrame(u,
-								 (*(mPath->getControlPointsPtr()))[patchNum],
-								 (*(mPath->getControlPointsPtr()))[patchNum + 1],
-								 tangent,
-								 binormal,
-								 normal);
-	*/
-	//tangent = t;
+
+//	mPath->calculateFrenetFrame(u,
+//								 (*(mPath->getControlPointsPtr()))[patchNum],
+//								 (*(mPath->getControlPointsPtr()))[patchNum + 1],
+//								 tangent,
+//								 binormal,
+//								 normal);
+
+//	tangent = -glm::normalize(mTangents->at((int)((u  + patchNum) * 100)));
+//	binormal = -glm::normalize(mUp->at((int)((u  + patchNum) * 100)));
+//	normal = glm::normalize(glm::cross(binormal,tangent));
+	tangent = -glm::normalize(mTangents->at((int)((u  + patchNum) * 100)));
+	normal = glm::normalize(mUp->at((int)((u  + patchNum) * 100)));
+	binormal = glm::normalize(glm::cross(normal,tangent));
 }
 
 void resizeCallback( GLFWwindow *window, int w, int h)
@@ -235,13 +242,15 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		//Update Camera and following the spline by pressing space
-		if (glfwGetKey( window, GLFW_KEY_SPACE) == GLFW_PRESS)   {
+		if (glfwGetKey( window, GLFW_KEY_SPACE) == GLFW_PRESS)
+			pressed = !pressed;
+		if(pressed == true){
 			if(count == mPath->getVerticesPtr()->size()){
 				count = 0;
 			}
-			cam_trackball.setCenter(&mVertices->at(count));
-			cam_trackball.setPosition(&mTangents->at(count));
-			cam_trackball.setUpvector(&mUp->at(count));
+			cam_trackball.setCenter(&renderPosition);
+			cam_trackball.setPosition(&tangent.operator*=(-1));
+			cam_trackball.setUpvector(&normal);
 			count++;
 		}
 		cam_trackball.update( window);
@@ -258,9 +267,9 @@ int main()
 		scene_node->render();
 
 		glm::mat4 modelmatrix = glm::transpose(glm::mat4(
-				tangent.x, 	tangent.y, 	tangent.z, 	renderPosition.x,
-				binormal.x, binormal.y, binormal.z, renderPosition.y,
-				normal.x, 	normal.y, 	normal.z, 	renderPosition.z,
+				tangent.x, 	normal.x, 	binormal.x, 	renderPosition.x,
+				tangent.y,  normal.y,   binormal.y,     renderPosition.y,
+				tangent.z, 	normal.z, 	binormal.z, 	renderPosition.z,
 				0.0f,		0.0f,		0.0f,		1.0f));
 
 

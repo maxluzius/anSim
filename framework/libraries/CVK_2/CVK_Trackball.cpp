@@ -85,7 +85,7 @@ void CVK::Trackball::update( GLFWwindow* window)
 	m_cameraPos.z = m_center.z + m_radius * sin(m_theta) * cos(m_phi) + m_cameraView.z;
 
 
-	m_viewmatrix = glm::lookAt( m_cameraPos + m_up + m_up + m_up, m_center + m_up + m_up + m_up, m_up); //eye where the camPosition is, center where u look at
+	m_viewmatrix = glm::lookAt( m_cameraPos + m_up , m_center + m_up , m_up); //eye where the camPosition is, center where u look at
 }
 
 void CVK::Trackball::setCenter( glm::vec3 *center)
