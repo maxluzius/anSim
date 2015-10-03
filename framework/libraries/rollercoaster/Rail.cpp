@@ -167,7 +167,7 @@ void CVK::Rail::calculatePipe()
 	//every 50th point we go for a pillar
 	if(m_up.at(count).y > 0){
 		if(count%50 == 0){
-			aiVector3D xAxis(2*rad,0.0,0.0);
+			aiVector3D xAxis(4*rad,0.0,0.0);
 			for (int j = 0; j < (m_positions.at(count).y - up.y)*10 + 1; j++) {
 				for (int i = 0; i < circle + 1; i++) {
 					aiQuaternion q_yAxis(aiVector3D(0.0,1.0,0.0), 2*PI * i / circle);

@@ -100,9 +100,6 @@ void updateTeapot(float d_t)
 //								 binormal,
 //								 normal);
 
-//	tangent = -glm::normalize(mTangents->at((int)((u  + patchNum) * 100)));
-//	binormal = -glm::normalize(mUp->at((int)((u  + patchNum) * 100)));
-//	normal = glm::normalize(glm::cross(binormal,tangent));
 	tangent = -glm::normalize(mTangents->at((int)((u  + patchNum) * 100)));
 	normal = glm::normalize(mUp->at((int)((u  + patchNum) * 100)));
 	binormal = glm::normalize(glm::cross(normal,tangent));
