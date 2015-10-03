@@ -87,20 +87,40 @@ void init_scene()
 	//track 2 ends here
 
 	//testtrack3 looping
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-10.0,5.0,1.0), glm::vec3(1.0,2.0,1.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(1.0,3.0,1.0), glm::vec3(5.0,0.0,0.0)));
+	//start down the hill
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,15.0,1.0), glm::vec3(1.0,0.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-20.0,15.0,1.0), glm::vec3(2.0,-1.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-8.0,7.5,1.0), glm::vec3(10.0,-5.0,0.0)));
+	//looping
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(1.0,3.0,1.0), glm::vec3(10.0,3.0,0.0)));
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0,10.0,0.0), glm::vec3(-15.0,14.0,0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(3.0,3.0,-1.0), glm::vec3(20.0,1.0,-1.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(20.0,1.0,-1.0), glm::vec3(-20.0,1.0,1.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(3.0,2.0,-1.0), glm::vec3(20.0,1.0,-1.0)));
+	//curve behind looping up the small hill
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(10.0,1.0,2.0), glm::vec3(10.0,-5.0,3.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(10.0,1.0,7.0), glm::vec3(-10.0,1.0,-5.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0,5.0,8.0), glm::vec3(-10.0,0.0,1.0)));
+	//down to the center and to the top of the last stage
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-2.0,2.0,0.0), glm::vec3(-5.0,5.0,-5.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-8.0,10.0,-8.0), glm::vec3(-5.0,3.0,-5.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-12.0,4.0,-13.0), glm::vec3(-5.0,-2.0,-5.0)));
+	//the bumb
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-20.0,4.0,-13.0), glm::vec3(-5.0,2.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,6.0,-13.0), glm::vec3(-5.0,0.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-35.0,3.0,-13.0), glm::vec3(-5.0,0.0,0.0)));
+	//last curve to the top
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-50.0,3.0,-13.0), glm::vec3(-10.0,0.0,5.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-50.0,3.0,-3.0), glm::vec3(5.0,3.0,5.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-35.0,15.0,1.0), glm::vec3(10.0,0.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,15.0,1.0), glm::vec3(1.0,0.0,0.0)));
 	//testtrack3 ends here
 
-	//testtrack3 circle
+	//testtrack4 circle
 //	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0,1.0,0.0), glm::vec3(10.0,1.0,0.0)));
 //	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(10.0,1.0,0.0), glm::vec3(15.0,1.0,0.0)));
 //	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-5.0,0.0,0.0), glm::vec3(0.0,-5.0,0.0)));
 //	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(0.0,-5.0,0.0), glm::vec3(5.0,0.0,0.0)));
 //	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0,0.0,0.0), glm::vec3(0.0,5.0,0.0)));
-	//testtrack3 ends here
+	//testtrack4 ends here
 
 
 	mVertices = mPath->getVerticesPtr();
