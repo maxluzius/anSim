@@ -24,11 +24,9 @@ public:
 	inline void addPoint(glm::vec3 point){ m_positions.push_back(point); }
 	inline void addTangent(glm::vec3 point, int number){this->num = number; m_tangents.push_back(point); calculatePipe();}
 	std::vector<glm::vec3>* getUpPtr(){ return &m_up; }
-<<<<<<< HEAD
-=======
 	std::vector<glm::vec4>* getConnect(){ return &m_connectT;}
 	std::vector<glm::vec4>* getPillar(){ return &m_pillarsT;}
->>>>>>> miland
+
 
 private:
 	int num;
