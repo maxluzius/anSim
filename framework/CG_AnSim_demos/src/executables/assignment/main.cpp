@@ -44,31 +44,44 @@ bool pressed	= false;
 
 //*************************************************************************************************************
 float timeRunning 	= 0.0f;
-float speed 		= 2.0f;
-float position 		= 5.0f;
+float position 		= 0.0f;
+float speed 		= 5.0f;
 glm::vec3 renderPosition 	= glm::vec3(0.0f,0.0f,0.0f);
 glm::vec3 tangent 		= glm::vec3(1.0f,0.0f,0.0f);
 glm::vec3 normal		= glm::vec3(0.0f,1.0f,0.0f);
 glm::vec3 binormal		= glm::vec3(0.0f,0.0f,1.0f);
 
-float teapot_mass 			= 20.0f;
+float teapot_mass 			= 1500.0f;
 float teapot_acceleration 	= 0.0f;
 float gravity 				= 9.81f;
+float b						= 0.15f; // rolling resistance coefficent (steel/steel lubricated)
+float r						= 10.f; // radius of the wheel
+float wheels				= 4.f; // number of wheels per wagon
 float F_g 					= teapot_mass * gravity;
+float F_n;
 float F 					= 0.0f;
-int indexUp					= 0;
 glm::vec3 down				= glm::vec3(0.0f,-1.0f,0.0f);
 glm::vec3 curTangent;
+glm::vec3 curUp;
 //*************************************************************************************************************
 
 void updateTeapot(float d_t)
 {
 		timeRunning += d_t;
 
+		// Gravity Force
 		float dot = down.x * curTangent.x + down.y * curTangent.y + down.z * curTangent.z;
 		float cosA = dot / (down.length() * curTangent.length());
 
 		F = F_g * -cosA;
+
+		// Rolling Resistance
+		dot = down.x * curUp.x + down.y * curUp.y + down.z * curUp.z;
+		cosA = dot/ (down.length() * curUp.length());
+		F_n = F_g * cosA;
+		F += 11 * wheels * (F_n * (b/r));
+
+		// calculate all the acceleration from sum of forces F
 		teapot_acceleration = F / teapot_mass;
 		speed = teapot_acceleration * d_t + speed;
 
@@ -96,7 +109,8 @@ void updateTeapot(float d_t)
 								  renderPosition,
 								  t);
 
-	curTangent = mTangents->at((int)((u  + patchNum) * 100));
+	curTangent = (mTangents->at((int)((u  + patchNum) * 100)));
+	curUp = glm::normalize(mUp->at((int)((u  + patchNum) * 100)));
 
 	//Orientierung des Teapots mittels der Frenet Frame Methode
 
@@ -182,8 +196,8 @@ void init_scene()
 	}
 
 	curTangent = mPath->getTangentsPtr()->at(0);
+	curUp = mUp->at(0);
 
-	//render rail geometry
 	CVK::Node *rail_node_up = new CVK::Node("Rail_up");
 	rail_node_up->setModelMatrix( glm::translate(glm::mat4( 1.0f), glm::vec3( 0, 0, 0)));
 	rail_node_up->setMaterial(mat_rail);
