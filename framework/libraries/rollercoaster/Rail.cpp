@@ -71,14 +71,12 @@ void CVK::Rail::calculatePipe()
 	up.operator/=(up.length()* 1/hight);
 	m_up.push_back(up);
 
-	//std::cout << "erster: " << ortho.x << " " << ortho.y << " " << ortho.z << std::endl;
-	//std::cout << "zweiter: " << up.x << " " << up.y << " " << up.z << std::endl;
 	//vector we rotate around the axis(length is rad of circle we draw)
 	vec = aiVector3D(m_up.at(count).x, m_up.at(count).y, m_up.at(count).z); //radius
 	vec = vec.Normalize();
-	vec.operator/=(1.0/rad);
+	vec.operator*=(rad);
 	vec2 = vec; // twice radius
-	vec2.operator/=(1.0/2.0);
+	vec2.operator*=(2.0);
 	for (int j = 0; j < circle+1; j++) {
 		//axis we rotate around
 		q_axis = aiQuaternion(aiVector3D(m_tangents.at(count).x, m_tangents.at(count).y, m_tangents.at(count).z),
@@ -95,7 +93,9 @@ void CVK::Rail::calculatePipe()
 	//every 10th point we set a connector
 	if(count%10 == 0) {
 		vector = glm::vec3(m_positions.at(count));
-		tangent = glm::vec3(m_tangents.at(count).x * hight/8.0, m_tangents.at(count).y * hight/8.0, m_tangents.at(count).z * hight/8.0); //tickness of connector
+		tangent = glm::normalize(m_tangents.at(count));
+		tangent.operator*=(hight/5.0);
+		//tangent = glm::vec3(m_tangents.at(count).x * hight/8.0, m_tangents.at(count).y * hight/8.0, m_tangents.at(count).z * hight/8.0); //tickness of connector
 		upHalf = glm::vec3(up.x * 2*hight, up.y * 2*hight, up.z * 2*hight);
 		//frontside
 		m_connectT.push_back(glm::vec4(tangent + vector + binorm, 1.0));

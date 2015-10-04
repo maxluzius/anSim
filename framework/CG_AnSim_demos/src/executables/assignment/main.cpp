@@ -95,7 +95,7 @@ void updateTeapot(float d_t)
 								  renderPosition,
 								  t);
 
-	curTangent = mTangents->at((int)((u  + patchNum) * 100));
+	curTangent = glm::normalize(mTangents->at((int)((u  + patchNum) * 100)));
 
 	//Orientierung des Teapots mittels der Frenet Frame Methode
 
@@ -140,9 +140,9 @@ void init_scene()
 	mPath = new CVK::HermiteSpline();
 
 	//start down the hill
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,15.0,1.0), glm::vec3(1.0,0.0,0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-20.0,15.0,1.0), glm::vec3(2.0,-1.0,0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-8.0,7.5,1.0), glm::vec3(10.0,-5.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,17.0,1.0), glm::vec3(1.0,0.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-20.0,15.0,1.0), glm::vec3(6.0,-5.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-8.0,7.5,1.0), glm::vec3(10.0,-10.0,0.0)));
 	//looping
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(1.0,3.0,1.0), glm::vec3(10.0,3.0,0.0)));
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0,10.0,0.0), glm::vec3(-15.0,14.0,0.0)));
@@ -162,8 +162,8 @@ void init_scene()
 	//last curve to the top
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-50.0,3.0,-13.0), glm::vec3(-10.0,0.0,5.0)));
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-50.0,3.0,-3.0), glm::vec3(5.0,3.0,5.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-35.0,15.0,1.0), glm::vec3(10.0,0.0,0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,15.0,1.0), glm::vec3(1.0,0.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-35.0,17.0,1.0), glm::vec3(10.0,0.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,17.0,1.0), glm::vec3(1.0,0.0,0.0)));
 
 	//mVertices = mPath->getVerticesPtr();
 	mTangents = mPath->getTangentsPtr();
