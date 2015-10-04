@@ -7,13 +7,12 @@
 #include <CVK_AnSim/CVK_AS_HermiteSpline.h>
 #include <CVK_AnSim/CVK_AS_LineStrip.h>
 #include <rollercoaster/Rail.h>
+#include <rollercoaster/Pillars.h>
 
 #define WIDTH 800
 #define HEIGHT 800
 
 GLFWwindow* window;
-
-CVK::Node *scene_node;
 
 //define Camera (Trackball)
 CVK::Perspective projection( 60.0f, WIDTH / (float) HEIGHT, 0.1f, 100.f);
@@ -23,18 +22,25 @@ CVK::Trackball cam_trackball( WIDTH, HEIGHT, &projection);
 CVK::Light *plight;
 
 //define materials
-CVK::Material *mat_red;
+CVK::Material *mat_rail;
+CVK::Material *mat_pillars;
 
 float shininess = 100.0f;
 
-CVK::HermiteSpline *mPath;
-CVK::LineStrip* line;
-CVK::Rail* rail;
-std::vector<glm::vec3> *mVertices;
+//define objects
+CVK::Node* 			scene_node;
+CVK::Rail* 			rail;
+CVK::Pillars* 		pillar;
+CVK::HermiteSpline* mPath;
+
+//define arrays
 std::vector<glm::vec3> *mTangents;
 std::vector<glm::vec3> *mUp;
-int count = 0;
-bool pressed = false;
+//std::vector<glm::vec3> *mVertices;
+
+//define initial variables
+int count		= 0;
+bool pressed	= false;
 
 //*************************************************************************************************************
 float timeRunning 	= 0.0f;
@@ -123,7 +129,8 @@ void init_camera()
 
 void init_materials()
 {
-	mat_red = new CVK::Material(red, white, shininess);
+	mat_rail = new CVK::Material(blue, white, shininess);
+	mat_pillars = new CVK::Material(white, white, shininess);
 }
 
 void init_scene()
@@ -158,7 +165,7 @@ void init_scene()
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-35.0,15.0,1.0), glm::vec3(10.0,0.0,0.0)));
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,15.0,1.0), glm::vec3(1.0,0.0,0.0)));
 
-	mVertices = mPath->getVerticesPtr();
+	//mVertices = mPath->getVerticesPtr();
 	mTangents = mPath->getTangentsPtr();
 	mPath->generateRenderVertices();
 
@@ -175,11 +182,20 @@ void init_scene()
 
 	curTangent = mPath->getTangentsPtr()->at(0);
 
+	//render rail geometry
 	CVK::Node *rail_node_up = new CVK::Node("Rail_up");
 	rail_node_up->setModelMatrix( glm::translate(glm::mat4( 1.0f), glm::vec3( 0, 0, 0)));
-	rail_node_up->setMaterial( mat_red);
+	rail_node_up->setMaterial(mat_rail);
 	rail_node_up->setGeometry( rail);
 	scene_node->addChild( rail_node_up);
+
+	//render pillar geometry
+	pillar = new CVK::Pillars(rail->getConnect(),rail->getPillar());
+	CVK::Node *pillar_node_up = new CVK::Node("Pillar_up");
+	pillar_node_up->setModelMatrix( glm::translate(glm::mat4( 1.0f), glm::vec3( 0, 0, 0)));
+	pillar_node_up->setMaterial(mat_pillars);
+	pillar_node_up->setGeometry( pillar);
+	scene_node->addChild( pillar_node_up);
 }
 
 int main()
@@ -233,7 +249,7 @@ int main()
 	while( !glfwWindowShouldClose( window))
 	{
 		float currentTime = static_cast<float>(glfwGetTime());
-		deltaTime = currentTime - oldTime;
+		deltaTime = (currentTime - oldTime);
 		oldTime = currentTime;
 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -264,9 +280,9 @@ int main()
 		scene_node->render();
 
 		glm::mat4 modelmatrix = glm::transpose(glm::mat4(
-				tangent.x, 	normal.x, 	binormal.x, 	renderPosition.x,
-				tangent.y,  normal.y,   binormal.y,     renderPosition.y,
-				tangent.z, 	normal.z, 	binormal.z, 	renderPosition.z,
+				tangent.x, 	normal.x, 	binormal.x, 	renderPosition.x+normal.x/2.5,
+				tangent.y,  normal.y,   binormal.y,     renderPosition.y+normal.y/2.5,
+				tangent.z, 	normal.z, 	binormal.z, 	renderPosition.z+normal.z/2.5,
 				0.0f,		0.0f,		0.0f,		1.0f));
 
 
