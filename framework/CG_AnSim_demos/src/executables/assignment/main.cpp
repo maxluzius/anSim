@@ -126,7 +126,7 @@ void updateTeapot(float d_t)
 //								 binormal,
 //								 normal);
 
-	tangent = -glm::normalize(mTangents->at((int)((u  + patchNum) * 100)));
+	tangent = glm::normalize(mTangents->at((int)((u  + patchNum) * 100)));
 	normal = glm::normalize(mUp->at((int)((u  + patchNum) * 100)));
 	binormal = glm::normalize(glm::cross(normal,tangent));
 }
@@ -149,8 +149,8 @@ void init_camera()
 
 void init_materials()
 {
-	mat_rail = new CVK::Material(blue, white, shininess);
-	mat_pillars = new CVK::Material(white, white, shininess);
+	mat_rail = new CVK::Material(SteelBlue, white, shininess);
+	mat_pillars = new CVK::Material(darkgrey, grey, shininess);
 }
 
 void init_scene()
@@ -256,9 +256,9 @@ int main()
 	init_scene();
 
 	//define Light Sources
-	plight = new CVK::Light(glm::vec4(-10, 20, -5, 1), grey, glm::vec3(0.0, 1, 0.0), 1.0f, 0.0f);
+	plight = new CVK::Light(glm::vec4(-10, 5, -15, 1), grey, glm::vec3(0.0, 1, 0.0), 1.0f, 0.0f);
 	CVK::State::getInstance()->addLight(plight);
-	plight1 = new CVK::Light(glm::vec4(-10, 20, -5, 1), grey, glm::vec3(0.0, 1, 0.0), 1.0f, 0.0f);
+	plight1 = new CVK::Light(glm::vec4(10, 10, 5, 1), grey, glm::vec3(0.0, 1, 0.0), 1.0f, 0.0f);
 	CVK::State::getInstance()->addLight(plight1);
 	CVK::State::getInstance()->updateSceneSettings(darkgrey, 0, white, 1, 10, 1);
 
@@ -276,17 +276,19 @@ int main()
 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+		updateTeapot(deltaTime);
+
 		//Update Camera and following the spline by pressing space
 		if (glfwGetKey( window, GLFW_KEY_SPACE) == GLFW_PRESS)
 			pressed = !pressed;
 		if(pressed == true){
 			cam_trackball.setCenter(&renderPosition);
-			cam_trackball.setPosition(&tangent.operator*=(-1));
+			cam_trackball.setPosition(&tangent);
 			cam_trackball.setUpvector(&normal);
 		}
 		cam_trackball.update( window);
 
-		updateTeapot(deltaTime);
+
 
 		//Use Shader and define camera uniforms
 		CVK::State::getInstance()->setShader(&phongShader);
@@ -300,9 +302,9 @@ int main()
 
 		//**************************************************************************************************
 		glm::mat4 modelmatrix = glm::transpose(glm::mat4(
-				tangent.x, 	normal.x, 	binormal.x, 	renderPosition.x+normal.x/2.5,
-				tangent.y,  normal.y,   binormal.y,     renderPosition.y+normal.y/2.5,
-				tangent.z, 	normal.z, 	binormal.z, 	renderPosition.z+normal.z/2.5,
+				-tangent.x, 	normal.x, 	binormal.x, 	renderPosition.x+normal.x/2.5,
+				-tangent.y,  normal.y,   binormal.y,     renderPosition.y+normal.y/2.5,
+				-tangent.z, 	normal.z, 	binormal.z, 	renderPosition.z+normal.z/2.5,
 				0.0f,		0.0f,		0.0f,		1.0f));
 
 		modelmatrix = glm::scale(modelmatrix, glm::vec3(0.5f,0.5f,0.5f));
@@ -311,9 +313,9 @@ int main()
 		//**************************************************************************************************
 
 		glClear(GL_DEPTH_BUFFER_BIT);
-		CVK::State::getInstance()->setShader(&lineShader);
-		lineShader.update();
-		coords.render(&lineShader);
+//		CVK::State::getInstance()->setShader(&lineShader);
+//		lineShader.update();
+//		coords.render(&lineShader);
 
 		glfwSwapBuffers( window);
 		glfwPollEvents();;
