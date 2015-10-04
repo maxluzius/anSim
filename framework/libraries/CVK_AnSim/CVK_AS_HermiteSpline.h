@@ -8,27 +8,43 @@
 namespace CVK
 {
 
-class HermiteSpline
-{
-public:
-	HermiteSpline();
-	virtual ~HermiteSpline();
-	void evaluateHermiteSpline(float u, HermiteSplineControlPoint* c0, HermiteSplineControlPoint* c1, glm::vec3 &point, glm::vec3 &tangent);
+	struct ArcLengthTableEntry
+	{
+		float u;
+		int patchNumber;
+		float arcLength;
+	};
 
-	inline void addControlPoint(HermiteSplineControlPoint* c){ mControlPoints.push_back(c); }
-	void generateRenderVertices();
-	std::vector<HermiteSplineControlPoint*>* getControlPointsPtr(){ return &mControlPoints; }
-	std::vector<glm::vec3>* getVerticesPtr(){ return &mVertices; }
-	std::vector<glm::vec3>* getTangentsPtr(){ return &mTangents; }
+	class HermiteSpline
+	{
+	public:
+		HermiteSpline();
+		virtual ~HermiteSpline();
+		void evaluateHermiteSpline(float u, HermiteSplineControlPoint* c0, HermiteSplineControlPoint* c1, glm::vec3 &point, glm::vec3 &tangent);
 
-private:
-	std::vector<HermiteSplineControlPoint*> mControlPoints;
-	std::vector<glm::vec3> mVertices;
-	std::vector<glm::vec3> mTangents;
+		//********************************************************************************
+		void generateArcLengthTable(int resolution);
+		void getParameterByArcLength(float length, float &u, int &patchNum);
+		void calculateFrenetFrame(float u, HermiteSplineControlPoint* c0, HermiteSplineControlPoint* c1, glm::vec3 &tangent, glm::vec3 &binormal, glm::vec3 &normal);
+		//********************************************************************************
 
-	void deCasteljau(float t, std::vector<glm::vec3> &cp, glm::vec3 &point, glm::vec3 &tangent);
-	void sampleHermiteSpline(HermiteSplineControlPoint* c0, HermiteSplineControlPoint* c1, int numVerts);
-};
+		inline void addControlPoint(HermiteSplineControlPoint* c){ mControlPoints.push_back(c); }
+		void generateRenderVertices();
+		std::vector<HermiteSplineControlPoint*>* getControlPointsPtr(){ return &mControlPoints; }
+		std::vector<glm::vec3>* getVerticesPtr(){ return &mVertices; }
+		std::vector<glm::vec3>* getTangentsPtr(){ return &mTangents; }
+
+	private:
+		std::vector<HermiteSplineControlPoint*> mControlPoints;
+		std::vector<glm::vec3> mVertices;
+		std::vector<glm::vec3> mTangents;
+		//********************************************************************************
+		std::vector<ArcLengthTableEntry> mArcLengthTable;
+		//********************************************************************************
+
+		void deCasteljau(float t, std::vector<glm::vec3> &cp, glm::vec3 &point, glm::vec3 &tangent);
+		void sampleHermiteSpline(HermiteSplineControlPoint* c0, HermiteSplineControlPoint* c1, int numVerts);
+	};
 
 };
 #endif //__CVK_AS_HERMITE_SPLINE_H

@@ -8,10 +8,10 @@ README_Windows.txt
 setup.bat
 setupmac.sh
 
-framework/resources/*
-framework/cmake/*
+#framework/resources/*
+#framework/cmake/*
 framework/CG_AnSim_demos/BUILD_Eclipse/*
-framework/CG_AnSim_demos/src/CMakeLists.txt
+#framework/CG_AnSim_demos/src/CMakeLists.txt
 *.DS_Store
 framework/CG_AnSim_demos/src/.idea/*
 
