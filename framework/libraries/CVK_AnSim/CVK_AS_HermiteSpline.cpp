@@ -194,7 +194,7 @@ void CVK::HermiteSpline::deCasteljau(float t, std::vector<glm::vec3> &cp, glm::v
 	{
 		point = (1-t) * cp.at(0) + t * cp.at(1);
 		tangent = cp.at(0) - cp.at(1);
-		tangent = glm::normalize(tangent);
+		//tangent = glm::normalize(tangent);
 	}
 	else
 	{
