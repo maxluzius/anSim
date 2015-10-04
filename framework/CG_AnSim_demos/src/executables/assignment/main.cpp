@@ -20,6 +20,7 @@ CVK::Trackball cam_trackball( WIDTH, HEIGHT, &projection);
 
 //define Lights
 CVK::Light *plight;
+CVK::Light *plight1;
 
 //define materials
 CVK::Material *mat_rail;
@@ -69,6 +70,7 @@ void updateTeapot(float d_t)
 {
 		timeRunning += d_t;
 
+	if((position <140 || position > 150) && position < 200) {
 		// Gravity Force
 		float dot = down.x * curTangent.x + down.y * curTangent.y + down.z * curTangent.z;
 		float cosA = dot / (down.length() * curTangent.length());
@@ -77,15 +79,18 @@ void updateTeapot(float d_t)
 
 		// Rolling Resistance
 		dot = down.x * curUp.x + down.y * curUp.y + down.z * curUp.z;
-		cosA = dot/ (down.length() * curUp.length());
+		cosA = dot / (down.length() * curUp.length());
 		F_n = F_g * cosA;
-		F += 11 * wheels * (F_n * (b/r));
+		F += 11 * wheels * (F_n * (b / r));
 
 		// calculate all the acceleration from sum of forces F
 		teapot_acceleration = F / teapot_mass;
 		speed = teapot_acceleration * d_t + speed;
+	}
+	else
+		speed = 5.0;
 
-		position += d_t * speed;
+	position += d_t * speed;
 
 
 	float u;
@@ -155,9 +160,9 @@ void init_scene()
 	mPath = new CVK::HermiteSpline();
 
 	//start down the hill
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,17.0,1.0), glm::vec3(1.0,0.0,0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-20.0,15.0,1.0), glm::vec3(6.0,-5.0,0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-8.0,7.5,1.0), glm::vec3(10.0,-10.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,15.0,1.0), glm::vec3(1.0,0.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-20.0,15.0,1.0), glm::vec3(2.0,-1.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-8.0,7.5,1.0), glm::vec3(10.0,-5.0,0.0)));
 	//looping
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(1.0,3.0,1.0), glm::vec3(10.0,3.0,0.0)));
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(5.0,10.0,0.0), glm::vec3(-15.0,14.0,0.0)));
@@ -177,8 +182,8 @@ void init_scene()
 	//last curve to the top
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-50.0,3.0,-13.0), glm::vec3(-10.0,0.0,5.0)));
 	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-50.0,3.0,-3.0), glm::vec3(5.0,3.0,5.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-35.0,17.0,1.0), glm::vec3(10.0,0.0,0.0)));
-	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,17.0,1.0), glm::vec3(1.0,0.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-35.0,15.0,1.0), glm::vec3(10.0,0.0,0.0)));
+	mPath->addControlPoint(new CVK::HermiteSplineControlPoint(glm::vec3(-25.0,15.0,1.0), glm::vec3(1.0,0.0,0.0)));
 
 	//mVertices = mPath->getVerticesPtr();
 	mTangents = mPath->getTangentsPtr();
@@ -251,8 +256,10 @@ int main()
 	init_scene();
 
 	//define Light Sources
-	plight = new CVK::Light(glm::vec4(-1, 1, 1, 1), grey, glm::vec3(0, 0, 0), 1.0f, 0.0f);
+	plight = new CVK::Light(glm::vec4(-10, 20, -5, 1), grey, glm::vec3(0.0, 1, 0.0), 1.0f, 0.0f);
 	CVK::State::getInstance()->addLight(plight);
+	plight1 = new CVK::Light(glm::vec4(-10, 20, -5, 1), grey, glm::vec3(0.0, 1, 0.0), 1.0f, 0.0f);
+	CVK::State::getInstance()->addLight(plight1);
 	CVK::State::getInstance()->updateSceneSettings(darkgrey, 0, white, 1, 10, 1);
 
 	glLineWidth(6);
@@ -287,6 +294,7 @@ int main()
 
 		//define Light uniforms
 		CVK::State::getInstance()->setLight( 0, plight);
+		CVK::State::getInstance()->setLight( 0, plight1);
 
 		scene_node->render();
 
