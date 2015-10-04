@@ -44,8 +44,8 @@ bool pressed	= false;
 
 //*************************************************************************************************************
 float timeRunning 	= 0.0f;
-float position 		= 0.0f;
 float speed 		= 2.0f;
+float position 		= 5.0f;
 glm::vec3 renderPosition 	= glm::vec3(0.0f,0.0f,0.0f);
 glm::vec3 tangent 		= glm::vec3(1.0f,0.0f,0.0f);
 glm::vec3 normal		= glm::vec3(0.0f,1.0f,0.0f);
@@ -61,7 +61,6 @@ glm::vec3 down				= glm::vec3(0.0f,-1.0f,0.0f);
 glm::vec3 curTangent;
 //*************************************************************************************************************
 
-
 void updateTeapot(float d_t)
 {
 		timeRunning += d_t;
@@ -76,15 +75,17 @@ void updateTeapot(float d_t)
 		position += d_t * speed;
 
 
-
 	float u;
 	int patchNum;
+	float u2;
+	int patchNum2;
 	mPath->getParameterByArcLength(position, u, patchNum);
 	if(u < 0.0f){ //wenn der Teapot am Ende des Pfades angekommen ist wird er an die Ausgangsposition zurückgesetzt
 		position = 0.0f;
 		timeRunning = 0.0f;
 		return;
 	}
+
 
 	//jetzt  haben wir Parameter u und den index des entsprechenden Splines, nun können wir diesen evaluieren
 	//und erhalten die Position des Teekessels.
@@ -95,7 +96,7 @@ void updateTeapot(float d_t)
 								  renderPosition,
 								  t);
 
-	curTangent = glm::normalize(mTangents->at((int)((u  + patchNum) * 100)));
+	curTangent = mTangents->at((int)((u  + patchNum) * 100));
 
 	//Orientierung des Teapots mittels der Frenet Frame Methode
 
@@ -258,13 +259,9 @@ int main()
 		if (glfwGetKey( window, GLFW_KEY_SPACE) == GLFW_PRESS)
 			pressed = !pressed;
 		if(pressed == true){
-			if(count == mPath->getVerticesPtr()->size()){
-				count = 0;
-			}
 			cam_trackball.setCenter(&renderPosition);
 			cam_trackball.setPosition(&tangent.operator*=(-1));
 			cam_trackball.setUpvector(&normal);
-			count++;
 		}
 		cam_trackball.update( window);
 
@@ -279,17 +276,17 @@ int main()
 
 		scene_node->render();
 
+		//**************************************************************************************************
 		glm::mat4 modelmatrix = glm::transpose(glm::mat4(
 				tangent.x, 	normal.x, 	binormal.x, 	renderPosition.x+normal.x/2.5,
 				tangent.y,  normal.y,   binormal.y,     renderPosition.y+normal.y/2.5,
 				tangent.z, 	normal.z, 	binormal.z, 	renderPosition.z+normal.z/2.5,
 				0.0f,		0.0f,		0.0f,		1.0f));
 
-
-
 		modelmatrix = glm::scale(modelmatrix, glm::vec3(0.5f,0.5f,0.5f));
 		teapot.setModelMatrix(modelmatrix);
 		teapot.render();
+		//**************************************************************************************************
 
 		glClear(GL_DEPTH_BUFFER_BIT);
 		CVK::State::getInstance()->setShader(&lineShader);
