@@ -23,11 +23,32 @@ public:
 
 	inline void addPoint(glm::vec3 point){ m_positions.push_back(point); }
 	inline void addTangent(glm::vec3 point, int number){this->num = number; m_tangents.push_back(point); calculatePipe();}
+	std::vector<glm::vec3>* getUpPtr(){ return &m_up; }
+	std::vector<glm::vec4>* getConnect(){ return &m_connectT;}
+	std::vector<glm::vec4>* getPillar(){ return &m_pillarsT;}
+
 
 private:
 	int num;
+	int count;
+	glm::vec3 up;
+	glm::vec3 binorm;
+	aiVector3D tmp;
+	aiVector3D tmp2;
+	aiVector3D vec;
+	aiVector3D vec2; //double of vec2
+	aiQuaternion q_axis;
+	glm::vec3 out;
+	glm::vec3 out2;
+	glm::vec3 vector;
+	glm::vec3 tangent;
+	glm::vec3 upHalf;
+	aiVector3D xAxis;
+	aiQuaternion q_yAxis;
+
 	std::vector<glm::vec3> m_positions;
 	std::vector<glm::vec3> m_tangents;
+	std::vector<glm::vec3> m_up;
 	std::vector<glm::vec4> m_pipeR; //points to render circles at track right/left/middle
 	std::vector<glm::vec4> m_pipeL;
 	std::vector<glm::vec4> m_pipeM;
