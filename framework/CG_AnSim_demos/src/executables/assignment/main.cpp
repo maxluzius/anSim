@@ -6,14 +6,19 @@
 #include <CVK_AnSim/CVK_AS_CoordinateSystem.h>
 #include <CVK_AnSim/CVK_AS_HermiteSpline.h>
 #include <CVK_AnSim/CVK_AS_LineStrip.h>
+#include <CVK_AnSim/CVK_AS_ShaderSkybox.h>
+#include <CVK_AnSim/CVK_AS_ShaderPlane.h>
 #include <rollercoaster/Rail.h>
 
 #define WIDTH 800
 #define HEIGHT 800
 
+bool showSkyBox = true;
+
 GLFWwindow* window;
 
 CVK::Node *scene_node;
+CVK::Node *plane_node;
 
 //define Camera (Trackball)
 CVK::Perspective projection( 60.0f, WIDTH / (float) HEIGHT, 0.1f, 100.f);
@@ -23,7 +28,7 @@ CVK::Trackball cam_trackball( WIDTH, HEIGHT, &projection);
 CVK::Light *plight;
 
 //define materials
-CVK::Material *mat_red;
+CVK::Material *mat_red, *mat_green, *mat_tex;
 
 float shininess = 100.0f;
 
@@ -33,6 +38,8 @@ CVK::Rail* rail;
 std::vector<glm::vec3> *mVertices;
 std::vector<glm::vec3> *mTangents;
 int count = 0;
+CVK::Cube *cube;
+
 
 
 void resizeCallback( GLFWwindow *window, int w, int h)
@@ -40,6 +47,22 @@ void resizeCallback( GLFWwindow *window, int w, int h)
 	cam_trackball.setWidthHeight( w, h);
 	cam_trackball.getProjection()->updateRatio( w / (float) h);
 	glViewport( 0, 0, w, h);
+}
+
+void charCallback (GLFWwindow *window, unsigned int key)
+{
+    switch (key)
+    {
+        case 'W':
+            glPolygonMode( GL_FRONT_AND_BACK, GL_FILL );
+            break;
+        case 'w':
+            glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
+            break;
+        case 's':
+            showSkyBox = !showSkyBox;
+            break;
+    }
 }
 
 void init_camera()
@@ -54,6 +77,8 @@ void init_camera()
 void init_materials()
 {
 	mat_red = new CVK::Material(red, white, shininess);
+    mat_green = new CVK::Material(1.0f, Green);
+    mat_tex = new CVK::Material((char*)RESOURCES_PATH "/cubeMap2/_deserted_bottom.jpg", 1.0f, 0.0f, glm::vec3(0.0f, 0.0f, 0.0f), 0.0f);
 }
 
 void init_scene()
@@ -84,7 +109,16 @@ void init_scene()
 	rail_node_up->setMaterial( mat_red);
 	rail_node_up->setGeometry( rail);
 	scene_node->addChild( rail_node_up);
-
+    
+    //Skybox
+    cube = new CVK::Cube(10.0f);
+    
+    //Ground
+    CVK::Plane *plane = new CVK::Plane();
+    plane_node = new CVK::Node("Plane");
+    plane_node->setModelMatrix( glm::scale(glm::mat4( 1.0f), glm::vec3( 60, 60, 60)));
+    plane_node->setMaterial( mat_tex);
+    plane_node->setGeometry( plane);
 }
 
 int main() 
@@ -96,6 +130,7 @@ int main()
 	glfwSetWindowPos( window, 100, 50);
 	glfwMakeContextCurrent(window);
 	glfwSetWindowSizeCallback( window, resizeCallback);
+    glfwSetCharCallback (window, charCallback);
 	glewInit();
 
 	CVK::State::getInstance()->setBackgroundColor( white);
@@ -105,14 +140,35 @@ int main()
 	glEnable(GL_BLEND);         
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  
 
+    //load cube map texture
+    const char *textureNames[6] = {(char*)RESOURCES_PATH "/cubeMap2/_deserted_front.jpg",
+        (char*)RESOURCES_PATH "/cubeMap2/_deserted_back.jpg",
+        (char*)RESOURCES_PATH "/cubeMap2/_deserted_up.jpg",
+        (char*)RESOURCES_PATH "/cubeMap2/_deserted_bottom.jpg",
+        (char*)RESOURCES_PATH "/cubeMap2/_deserted_left.jpg",
+        (char*)RESOURCES_PATH "/cubeMap2/_deserted_right.jpg" };
+    CVK::CubeMapTexture cubeMap( textureNames);
+    CVK::State::getInstance()->setCubeMapTexture(&cubeMap);
+    
+    
+    
+    
 	//load, compile and link Shader
 	const char *shadernames[2] = { SHADERS_PATH "/Phong.vert", SHADERS_PATH "/Phong.frag" };
 	CVK::ShaderPhong phongShader(VERTEX_SHADER_BIT | FRAGMENT_SHADER_BIT, shadernames);
 	CVK::State::getInstance()->setShader(&phongShader);
-	const char *shadernames2[2] = { SHADERS_PATH "/ColorMVPShader.vert", SHADERS_PATH "/ColorMVPShader.frag" };
+	
+    const char *shadernames2[2] = { SHADERS_PATH "/ColorMVPShader.vert", SHADERS_PATH "/ColorMVPShader.frag" };
 	CVK::ShaderLineRender lineShader(VERTEX_SHADER_BIT | FRAGMENT_SHADER_BIT, shadernames2);
 	CVK::State::getInstance()->setShader(&lineShader);
-
+    
+    const char *skyBoxShadernames[2] = {SHADERS_PATH "/SkyBox.vert", SHADERS_PATH "/SkyBox.frag"};
+    CVK::ShaderSkybox skyboxShader( VERTEX_SHADER_BIT|FRAGMENT_SHADER_BIT, skyBoxShadernames);
+    
+    const char *planeShadernames[2] = {SHADERS_PATH "/Plane.vert", SHADERS_PATH "/Plane.frag"};
+    CVK::ShaderPlane planeShader( VERTEX_SHADER_BIT|FRAGMENT_SHADER_BIT, planeShadernames);
+    
+    
 	init_camera();
 	init_materials();
 	init_scene();
@@ -125,7 +181,7 @@ int main()
 	glLineWidth(6);
 
 	CVK::CoordinateSystem coords = CVK::CoordinateSystem(glm::vec3(0.0f));
-	
+    
 	while( !glfwWindowShouldClose( window))
 	{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -148,16 +204,38 @@ int main()
 		//define Light uniforms
 		CVK::State::getInstance()->setLight( 0, plight);
 
+        if(showSkyBox)
+        {
+            glDisable(GL_DEPTH_TEST);
+            CVK::State::getInstance()->setShader(&skyboxShader);
+            skyboxShader.update();
+            cube->render();
+            
+            glEnable(GL_DEPTH_TEST);
+            
+        }
+        
+        CVK::State::getInstance()->setShader(&planeShader);
+        planeShader.update(plane_node);
+        plane_node->render();
+        
+        CVK::State::getInstance()->setShader(&phongShader);
 		scene_node->render();
-
+        
 		glClear(GL_DEPTH_BUFFER_BIT);
 		CVK::State::getInstance()->setShader(&lineShader);
 		lineShader.update();
 		coords.render(&lineShader);
+        
+        
 
 		glfwSwapBuffers( window);
 		glfwPollEvents();;
 	}
+    
+    // cleanup
+    //delete skybox;
+    
 	glfwDestroyWindow( window);
 	glfwTerminate();
 	return 0;

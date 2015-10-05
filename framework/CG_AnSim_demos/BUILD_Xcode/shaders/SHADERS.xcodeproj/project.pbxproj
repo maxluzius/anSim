@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              4C066FA9B15A4ACCAB9F7C63 /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 83C5334BE42C4B169944D30A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            3717168E30E54FE38384C1BF /* CMake Rules */,
+                     );
+                     dependencies = (
+                            79EAA536950D4ADFB6E6DFB4 /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              F2BC6EEFEE6941F8B720E9A3 /* SHADERS */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 31C7B1B0B7BF4828AF242601 /* Build configuration list for PBXAggregateTarget "SHADERS" */;
+                     buildPhases = (
+                     );
+                     dependencies = (
+                            9CA0271A1E6B4485B08E4A51 /* PBXTargetDependency */,
+                     );
+                     name = SHADERS;
+                     productName = SHADERS;
+              };
+              91C91DD9FB7B4C738E0FC048 /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = A568566DD6C24064AC07B9D3 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            150F38A7F5CF4C4C9FF8B40D /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildStyle section */
+              8F491D0C866D4871839A5B97 /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              344BDC820D9945F8A7D5CF76 /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              4C5CE56420F04CF5BA42F985 /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              58B1458D25CD47EEA9B244D0 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = B8C5C6BA14804AB3BEEEA9B4 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 91C91DD9FB7B4C738E0FC048;
+                     remoteInfo = ZERO_CHECK;
+              };
+              C1CA3068125E4DCFA4BB48D6 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = B8C5C6BA14804AB3BEEEA9B4 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 91C91DD9FB7B4C738E0FC048;
+                     remoteInfo = ZERO_CHECK;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+76256010B7914600ADE93AEE /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+774473FC74D642FD9ADF2625 /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/ColorMVPShader.vert */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "ColorMVPShader.vert"; path = "ColorMVPShader.vert"; sourceTree = SOURCE_ROOT; };
+0E72FFA1241C415CA0E4E772 /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/Phong.vert */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "Phong.vert"; path = "Phong.vert"; sourceTree = SOURCE_ROOT; };
+3AB2FFC73E034712A08BB3CE /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/Plane.vert */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "Plane.vert"; path = "Plane.vert"; sourceTree = SOURCE_ROOT; };
+629DEE3439B546008FE4884D /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/SkyBox.vert */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "SkyBox.vert"; path = "SkyBox.vert"; sourceTree = SOURCE_ROOT; };
+EF72D9F0A1E84305810CC531 /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/ColorMVPShader.frag */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "ColorMVPShader.frag"; path = "ColorMVPShader.frag"; sourceTree = SOURCE_ROOT; };
+3EB6A999BB8041D0A40962EB /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/Phong.frag */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "Phong.frag"; path = "Phong.frag"; sourceTree = SOURCE_ROOT; };
+E567D6D5273F41FDA5A17C67 /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/Plane.frag */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "Plane.frag"; path = "Plane.frag"; sourceTree = SOURCE_ROOT; };
+62DD4C1FC48B4D5AB263DBC8 /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/SkyBox.frag */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = "SkyBox.frag"; path = "SkyBox.frag"; sourceTree = SOURCE_ROOT; };
+2357EDFA733C4B84A21F7E6D /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+B04785911CD24FBAB625783C /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              25EA6B23CDD24CB6B8D465DB  = {
+                     isa = PBXGroup;
+                     children = (
+                            73AD31BB4C81421D8F2AEAD5 /* Sources */,
+                            29E8CCAD2D904208944F3C04 /* Resources */,
+                            F967BABE8EA4476A94D740E9 /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              73AD31BB4C81421D8F2AEAD5 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            909936287FB6480198F2ABFE /* SHADERS */,
+                            E883D7980CE943B6A79CD770 /* ALL_BUILD */,
+                            A050F04CA6AE4586A0F7C1E0 /* ZERO_CHECK */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              29E8CCAD2D904208944F3C04 /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              909936287FB6480198F2ABFE /* SHADERS */ = {
+                     isa = PBXGroup;
+                     children = (
+                            608A56597E2440AE81995E33 /* Vertex-Shaders */,
+                            EC7DD5F62C9B4788B1A0DDC4 /* Fragment-Shaders */,
+                            2357EDFA733C4B84A21F7E6D /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/CMakeLists.txt */,
+                     );
+                     name = SHADERS;
+                     sourceTree = "<group>";
+              };
+              608A56597E2440AE81995E33 /* Vertex-Shaders */ = {
+                     isa = PBXGroup;
+                     children = (
+                            774473FC74D642FD9ADF2625 /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/ColorMVPShader.vert */,
+                            0E72FFA1241C415CA0E4E772 /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/Phong.vert */,
+                            3AB2FFC73E034712A08BB3CE /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/Plane.vert */,
+                            629DEE3439B546008FE4884D /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/SkyBox.vert */,
+                     );
+                     name = "Vertex-Shaders";
+                     sourceTree = "<group>";
+              };
+              EC7DD5F62C9B4788B1A0DDC4 /* Fragment-Shaders */ = {
+                     isa = PBXGroup;
+                     children = (
+                            EF72D9F0A1E84305810CC531 /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/ColorMVPShader.frag */,
+                            3EB6A999BB8041D0A40962EB /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/Phong.frag */,
+                            E567D6D5273F41FDA5A17C67 /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/Plane.frag */,
+                            62DD4C1FC48B4D5AB263DBC8 /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/SkyBox.frag */,
+                     );
+                     name = "Fragment-Shaders";
+                     sourceTree = "<group>";
+              };
+              E883D7980CE943B6A79CD770 /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            21E02CBEA8884B26AA23FC1E /* CMake Rules */,
+                            76256010B7914600ADE93AEE /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              21E02CBEA8884B26AA23FC1E /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              A050F04CA6AE4586A0F7C1E0 /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            266FFEE28ADE4A25B08FEF00 /* CMake Rules */,
+                            B04785911CD24FBAB625783C /* /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              266FFEE28ADE4A25B08FEF00 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              F967BABE8EA4476A94D740E9 /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+              B8C5C6BA14804AB3BEEEA9B4 /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = E189FDC4396B48D3AD46319A /* Build configuration list for PBXProject  "SHADERS" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            344BDC820D9945F8A7D5CF76 /* Debug */,
+                            4C5CE56420F04CF5BA42F985 /* Release */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = 25EA6B23CDD24CB6B8D465DB;
+                     projectDirPath = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders;
+                     projectRoot = "";
+                     targets = (
+                            4C066FA9B15A4ACCAB9F7C63 /* ALL_BUILD */,
+                            F2BC6EEFEE6941F8B720E9A3 /* SHADERS */,
+                            91C91DD9FB7B4C738E0FC048 /* ZERO_CHECK */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              0D5F414226324A14A032CFE1 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              3717168E30E54FE38384C1BF /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/shaders -f /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/shaders/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              5A1A55C9F454451BABBEA6A2 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              E5B5F3167012480085BACBC4 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              150F38A7F5CF4C4C9FF8B40D /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/shaders -f /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/shaders/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              79EAA536950D4ADFB6E6DFB4 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 91C91DD9FB7B4C738E0FC048 /* ZERO_CHECK */;
+                     targetProxy = 58B1458D25CD47EEA9B244D0 /* PBXContainerItemProxy */;
+              };
+              9CA0271A1E6B4485B08E4A51 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 91C91DD9FB7B4C738E0FC048 /* ZERO_CHECK */;
+                     targetProxy = C1CA3068125E4DCFA4BB48D6 /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              A0F07D4962EF4DC59FF5DA6A /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/shaders/build;
+                     };
+                     name = Debug;
+              };
+              533B5E4E8E15478E9B5CDE77 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/shaders/build;
+                     };
+                     name = Release;
+              };
+              CEDE35B2EC594BE7A1B0AB63 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/shaders;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+                     };
+                     name = Debug;
+              };
+              6FFBE30D0B4B46FC884E57BE /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/shaders;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+                     };
+                     name = Release;
+              };
+              8F2131A0D05A44B8BDA32AB0 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = SHADERS;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/shaders;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+                     };
+                     name = Debug;
+              };
+              9E84E6DE689940F0B4D972A8 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = SHADERS;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/shaders;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+                     };
+                     name = Release;
+              };
+              2D4014DF744B4DFDBE10F696 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/shaders;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+                     };
+                     name = Debug;
+              };
+              9436BB2B1D124BA99F1EE7E6 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/shaders;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+                     };
+                     name = Release;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              E189FDC4396B48D3AD46319A /* Build configuration list for PBXProject  "SHADERS" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            A0F07D4962EF4DC59FF5DA6A /* Debug */,
+                            533B5E4E8E15478E9B5CDE77 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              83C5334BE42C4B169944D30A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            CEDE35B2EC594BE7A1B0AB63 /* Debug */,
+                            6FFBE30D0B4B46FC884E57BE /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              31C7B1B0B7BF4828AF242601 /* Build configuration list for PBXAggregateTarget "SHADERS" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            8F2131A0D05A44B8BDA32AB0 /* Debug */,
+                            9E84E6DE689940F0B4D972A8 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              A568566DD6C24064AC07B9D3 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            2D4014DF744B4DFDBE10F696 /* Debug */,
+                            9436BB2B1D124BA99F1EE7E6 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = B8C5C6BA14804AB3BEEEA9B4;
+}

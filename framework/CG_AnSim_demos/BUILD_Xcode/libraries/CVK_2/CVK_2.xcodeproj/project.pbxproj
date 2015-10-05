@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              4C066FA9B15A4ACCAB9F7C63 /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 5B986AC01A344636ABF9F72A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            5F213E4DCD014A338FFEF790 /* CMake Rules */,
+                     );
+                     dependencies = (
+                            34EA2203E9EB4A7E953097EC /* PBXTargetDependency */,
+                            EE9EF3DC7A4C430880C4DA96 /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              91C91DD9FB7B4C738E0FC048 /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 947F913472734A2D8FEFB50F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            45F32BB7C3454D6D863A8CBA /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+EB7E3730346B4F1EAD3BD0F6 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 0C341C2956CF433CB8893128 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+742BED797C414B2CB46C43A6 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Camera.cpp */ = {isa = PBXBuildFile; fileRef = 2D94D754E7FA422083D2A29E /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Camera.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+8883D613185A41BA9399FFDB /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Camera.h */ = {isa = PBXBuildFile; fileRef = CB011D498383452AB3EF74A9 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Camera.h */; settings = { COMPILER_FLAGS = ""; }; };
+6E9F5E7F4A274D4F9D2CA575 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CompatibilityTools.cpp */ = {isa = PBXBuildFile; fileRef = BC21A7B6681A4D19B1416325 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CompatibilityTools.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+B51D375F148A4BD1B4A7D92F /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CompatibilityTools.h */ = {isa = PBXBuildFile; fileRef = 3C05F083546F44F3A94D4A61 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CompatibilityTools.h */; settings = { COMPILER_FLAGS = ""; }; };
+42E8A12DB4AF441C91ECBCA6 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cone.cpp */ = {isa = PBXBuildFile; fileRef = DA04687F7EF348319157CB2C /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cone.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+C4F41B64E39C44949086C87F /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cone.h */ = {isa = PBXBuildFile; fileRef = D51E4AD2D31E4A7AB91C60E3 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cone.h */; settings = { COMPILER_FLAGS = ""; }; };
+08D30CED8772408CB7601E8C /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cube.cpp */ = {isa = PBXBuildFile; fileRef = E78FC6336A0C4CA2B7F6B8C0 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cube.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+1DF2FD583352425F9B4DE122 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cube.h */ = {isa = PBXBuildFile; fileRef = 5827F03FDA5F4E74882896BF /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cube.h */; settings = { COMPILER_FLAGS = ""; }; };
+28071486665F42FAAF58F831 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CubeMapTexture.cpp */ = {isa = PBXBuildFile; fileRef = 561988A3ACC84AE6BC1B1D9A /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CubeMapTexture.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+45AA63DF1D9842F1898BFBDD /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CubeMapTexture.h */ = {isa = PBXBuildFile; fileRef = 9A00788B011341D5B53129D9 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CubeMapTexture.h */; settings = { COMPILER_FLAGS = ""; }; };
+24A69ABB4D094B7EBE99562D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Defs.h */ = {isa = PBXBuildFile; fileRef = 2F9A1D7721AD412B80EC1A8D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Defs.h */; settings = { COMPILER_FLAGS = ""; }; };
+D70F343C1DB44492A941D883 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_FBO.cpp */ = {isa = PBXBuildFile; fileRef = 710D1B4768F246DF9A5726DD /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_FBO.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+D1166F16D3914B179BE65FDF /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_FBO.h */ = {isa = PBXBuildFile; fileRef = 798E45303B6048198148A87A /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_FBO.h */; settings = { COMPILER_FLAGS = ""; }; };
+BB5B30A199334D968D4D1585 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Framework.h */ = {isa = PBXBuildFile; fileRef = 92C85668BF2E46B38ADCC087 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Framework.h */; settings = { COMPILER_FLAGS = ""; }; };
+4730599D2C2541D6941E629C /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Geometry.cpp */ = {isa = PBXBuildFile; fileRef = 98E28B9619394025A9566778 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Geometry.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+9858BE5A11594EAF9F5EB4F8 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Geometry.h */ = {isa = PBXBuildFile; fileRef = 56E3375B7D4E4E479923F282 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Geometry.h */; settings = { COMPILER_FLAGS = ""; }; };
+85E721FB3BBF4626970D66CF /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Light.cpp */ = {isa = PBXBuildFile; fileRef = 188A80D3848243658BFA4E16 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Light.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+F98EE4D31532477FBF1DBB8A /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Light.h */ = {isa = PBXBuildFile; fileRef = DF60B8422F3349C6B0971834 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Light.h */; settings = { COMPILER_FLAGS = ""; }; };
+A5918CA14A71445F9556DA8D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Material.cpp */ = {isa = PBXBuildFile; fileRef = 5F1C880DB03A4A4CB57062D6 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Material.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+CD7D494604804E8C99D1C1EF /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Material.h */ = {isa = PBXBuildFile; fileRef = 7044967AD77C4A30BB4AB834 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Material.h */; settings = { COMPILER_FLAGS = ""; }; };
+D2315D917913402CB7B8DD69 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Node.cpp */ = {isa = PBXBuildFile; fileRef = 248C8FE683554947925A976F /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Node.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+A7256D3827784BC9AE94F2D4 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Node.h */ = {isa = PBXBuildFile; fileRef = C689DB37956E461A9C025696 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Node.h */; settings = { COMPILER_FLAGS = ""; }; };
+E6685C84CC6E4FFEA96C7906 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Ortho.cpp */ = {isa = PBXBuildFile; fileRef = EEEC0616C6894C1497544670 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Ortho.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+C32F1FC353D043ABB1273894 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Ortho.h */ = {isa = PBXBuildFile; fileRef = 8E46716153ED4CC3B736BF89 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Ortho.h */; settings = { COMPILER_FLAGS = ""; }; };
+F56B6DF5CD1643BD851CDFF4 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Perspective.cpp */ = {isa = PBXBuildFile; fileRef = 9A439E3B2B06435EAD7A0E65 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Perspective.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+14346368DF1D495D83C77151 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Perspective.h */ = {isa = PBXBuildFile; fileRef = 1B80BAF7C577413EB953C7C0 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Perspective.h */; settings = { COMPILER_FLAGS = ""; }; };
+69FCA77BB9ED4AF091D029BA /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Pilotview.cpp */ = {isa = PBXBuildFile; fileRef = 9EBA89CFE3634FFB9809419D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Pilotview.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+E0D9026BF5CE411385FB1697 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Pilotview.h */ = {isa = PBXBuildFile; fileRef = 2CA0EE288C654278A82571B5 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Pilotview.h */; settings = { COMPILER_FLAGS = ""; }; };
+67F1BD70DFD8413CB685A21D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Plane.cpp */ = {isa = PBXBuildFile; fileRef = F0DE882604F54C91B7DF915D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Plane.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+21C194435BA5466981C49DCB /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Plane.h */ = {isa = PBXBuildFile; fileRef = C67EC263FD1640509F6755A7 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Plane.h */; settings = { COMPILER_FLAGS = ""; }; };
+7347D94B2FEF45998DA9DA13 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Projection.cpp */ = {isa = PBXBuildFile; fileRef = DB015E148D0445F6B69DF6B2 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Projection.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+51B95E78E23B4BFCA945C585 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Projection.h */ = {isa = PBXBuildFile; fileRef = A1CBF58D9A594706A8F4F447 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Projection.h */; settings = { COMPILER_FLAGS = ""; }; };
+F0B52EA076C24D84A889F573 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderMinimal.cpp */ = {isa = PBXBuildFile; fileRef = E695AAA10CAA47EC814B38AC /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderMinimal.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+2FE2A1ACCBCA432D81C26E8C /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderMinimal.h */ = {isa = PBXBuildFile; fileRef = 98175ED22ADC4936A755FC03 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderMinimal.h */; settings = { COMPILER_FLAGS = ""; }; };
+C1283D56BC7948B98E567DF0 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPhong.cpp */ = {isa = PBXBuildFile; fileRef = 01CDF3E2FBB7412DBF14BB33 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPhong.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+BAB6D12D7DAE408EB431DEBA /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPhong.h */ = {isa = PBXBuildFile; fileRef = 02D847A4C8E64270BDB43052 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPhong.h */; settings = { COMPILER_FLAGS = ""; }; };
+D66ACADB2D2B4632A527EC86 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPostProcessing.cpp */ = {isa = PBXBuildFile; fileRef = 8E32035BA66A415D9C83959D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPostProcessing.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+ABD9F3C01D154B47AB16226A /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPostProcessing.h */ = {isa = PBXBuildFile; fileRef = C1C266BC27D84DCFB1A9C901 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPostProcessing.h */; settings = { COMPILER_FLAGS = ""; }; };
+AF0F467208184768989E9BEA /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSet.cpp */ = {isa = PBXBuildFile; fileRef = DA0FACACE7E345938C471600 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSet.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+640ED0F23F5449A6B9114DAE /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSet.h */ = {isa = PBXBuildFile; fileRef = F2C6C6CE5684448CBE4B8864 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSet.h */; settings = { COMPILER_FLAGS = ""; }; };
+B79F4C27F1F74CEC96CB4ED7 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSimpleTexture.cpp */ = {isa = PBXBuildFile; fileRef = F3CA2D0ED9674C86A030BCE5 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSimpleTexture.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+A56190CACBE24A5EBADDDC5C /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSimpleTexture.h */ = {isa = PBXBuildFile; fileRef = F0362EFC2C364031A6C89932 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSimpleTexture.h */; settings = { COMPILER_FLAGS = ""; }; };
+1E37B6685DF24C4087E543EE /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Sphere.cpp */ = {isa = PBXBuildFile; fileRef = 9DD26BA8D3764861A63E00E1 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Sphere.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+B6CF5989E09240DE9B095A7B /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Sphere.h */ = {isa = PBXBuildFile; fileRef = 78BC3C6682D64C4DBB6F5B10 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Sphere.h */; settings = { COMPILER_FLAGS = ""; }; };
+BFC75DFAA99E45939D155452 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_State.cpp */ = {isa = PBXBuildFile; fileRef = 791E266BD49D403B9D5EFE66 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_State.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+D8028D62F5EA4B609A011834 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_State.h */ = {isa = PBXBuildFile; fileRef = FC82609AB2D54E768528F4F0 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_State.h */; settings = { COMPILER_FLAGS = ""; }; };
+6A4AD603AB25406FA77E85BA /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Teapot.cpp */ = {isa = PBXBuildFile; fileRef = DA44D4B6FC7242D98582B3B2 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Teapot.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+126A0B0163EA41C09959CDA1 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Teapot.h */ = {isa = PBXBuildFile; fileRef = 5181AA4573CF4FD6B2D608BD /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Teapot.h */; settings = { COMPILER_FLAGS = ""; }; };
+12C8A315D08A4B248664E5D5 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Texture.cpp */ = {isa = PBXBuildFile; fileRef = 52AEB48641794D4BAECFB3FB /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Texture.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+E2509A7245BA43DAA890EB8C /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Texture.h */ = {isa = PBXBuildFile; fileRef = FEC686FCEA4A49D0ADB770A8 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Texture.h */; settings = { COMPILER_FLAGS = ""; }; };
+0EF6D4A9918745088EF794AD /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Trackball.cpp */ = {isa = PBXBuildFile; fileRef = 5485F42B7F84423DBE395FB6 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Trackball.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+E712876881914251B0289716 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Trackball.h */ = {isa = PBXBuildFile; fileRef = EED3B9032F9F47929795A7BA /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Trackball.h */; settings = { COMPILER_FLAGS = ""; }; };
+FE289858B30E4297A42A744B /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Triangle.cpp */ = {isa = PBXBuildFile; fileRef = 9FF106160DA44CBC8982F2B5 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Triangle.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+8C305747FD1C486E86C38835 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Triangle.h */ = {isa = PBXBuildFile; fileRef = 9BD1D131DB3245F8923A5CBE /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Triangle.h */; settings = { COMPILER_FLAGS = ""; }; };
+E23A511178A64A5ABE9188F5 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/Teapot.h */ = {isa = PBXBuildFile; fileRef = CB3E667C0B5B465DB3562878 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/Teapot.h */; settings = { COMPILER_FLAGS = ""; }; };
+2BCDEC2F5A824CE0B2F1FA0A /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/stb_image.cpp */ = {isa = PBXBuildFile; fileRef = 6F57E65042824B0CA48E4ACB /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/stb_image.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+B280929AF60F4164AABBF441 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/stb_image.h */ = {isa = PBXBuildFile; fileRef = 88845E661D5D4F859D6A7C39 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/stb_image.h */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              52FAA08FEBB34DD087B20F69 /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              5BA8FE975629433986E31935 /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              14A0DB101F1046D38282B18D /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              FF5D850EE634411BA2B6E20A /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = ED507E0F356D4E7CBD091736 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 53D9BE5893584F8DB2681EF2;
+                     remoteInfo = CVK_2;
+              };
+              00B9E3A23EE940B097033D05 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = ED507E0F356D4E7CBD091736 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 91C91DD9FB7B4C738E0FC048;
+                     remoteInfo = ZERO_CHECK;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+6619D99C904E4E5090F027F7 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+0C341C2956CF433CB8893128 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+2D94D754E7FA422083D2A29E /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Camera.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Camera.cpp"; path = "CVK_Camera.cpp"; sourceTree = SOURCE_ROOT; };
+CB011D498383452AB3EF74A9 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Camera.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Camera.h"; path = "CVK_Camera.h"; sourceTree = SOURCE_ROOT; };
+BC21A7B6681A4D19B1416325 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CompatibilityTools.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_CompatibilityTools.cpp"; path = "CVK_CompatibilityTools.cpp"; sourceTree = SOURCE_ROOT; };
+3C05F083546F44F3A94D4A61 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CompatibilityTools.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_CompatibilityTools.h"; path = "CVK_CompatibilityTools.h"; sourceTree = SOURCE_ROOT; };
+DA04687F7EF348319157CB2C /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cone.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Cone.cpp"; path = "CVK_Cone.cpp"; sourceTree = SOURCE_ROOT; };
+D51E4AD2D31E4A7AB91C60E3 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cone.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Cone.h"; path = "CVK_Cone.h"; sourceTree = SOURCE_ROOT; };
+E78FC6336A0C4CA2B7F6B8C0 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cube.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Cube.cpp"; path = "CVK_Cube.cpp"; sourceTree = SOURCE_ROOT; };
+5827F03FDA5F4E74882896BF /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cube.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Cube.h"; path = "CVK_Cube.h"; sourceTree = SOURCE_ROOT; };
+561988A3ACC84AE6BC1B1D9A /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CubeMapTexture.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_CubeMapTexture.cpp"; path = "CVK_CubeMapTexture.cpp"; sourceTree = SOURCE_ROOT; };
+9A00788B011341D5B53129D9 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CubeMapTexture.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_CubeMapTexture.h"; path = "CVK_CubeMapTexture.h"; sourceTree = SOURCE_ROOT; };
+2F9A1D7721AD412B80EC1A8D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Defs.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Defs.h"; path = "CVK_Defs.h"; sourceTree = SOURCE_ROOT; };
+710D1B4768F246DF9A5726DD /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_FBO.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_FBO.cpp"; path = "CVK_FBO.cpp"; sourceTree = SOURCE_ROOT; };
+798E45303B6048198148A87A /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_FBO.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_FBO.h"; path = "CVK_FBO.h"; sourceTree = SOURCE_ROOT; };
+92C85668BF2E46B38ADCC087 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Framework.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Framework.h"; path = "CVK_Framework.h"; sourceTree = SOURCE_ROOT; };
+98E28B9619394025A9566778 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Geometry.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Geometry.cpp"; path = "CVK_Geometry.cpp"; sourceTree = SOURCE_ROOT; };
+56E3375B7D4E4E479923F282 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Geometry.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Geometry.h"; path = "CVK_Geometry.h"; sourceTree = SOURCE_ROOT; };
+188A80D3848243658BFA4E16 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Light.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Light.cpp"; path = "CVK_Light.cpp"; sourceTree = SOURCE_ROOT; };
+DF60B8422F3349C6B0971834 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Light.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Light.h"; path = "CVK_Light.h"; sourceTree = SOURCE_ROOT; };
+5F1C880DB03A4A4CB57062D6 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Material.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Material.cpp"; path = "CVK_Material.cpp"; sourceTree = SOURCE_ROOT; };
+7044967AD77C4A30BB4AB834 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Material.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Material.h"; path = "CVK_Material.h"; sourceTree = SOURCE_ROOT; };
+248C8FE683554947925A976F /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Node.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Node.cpp"; path = "CVK_Node.cpp"; sourceTree = SOURCE_ROOT; };
+C689DB37956E461A9C025696 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Node.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Node.h"; path = "CVK_Node.h"; sourceTree = SOURCE_ROOT; };
+EEEC0616C6894C1497544670 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Ortho.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Ortho.cpp"; path = "CVK_Ortho.cpp"; sourceTree = SOURCE_ROOT; };
+8E46716153ED4CC3B736BF89 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Ortho.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Ortho.h"; path = "CVK_Ortho.h"; sourceTree = SOURCE_ROOT; };
+9A439E3B2B06435EAD7A0E65 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Perspective.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Perspective.cpp"; path = "CVK_Perspective.cpp"; sourceTree = SOURCE_ROOT; };
+1B80BAF7C577413EB953C7C0 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Perspective.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Perspective.h"; path = "CVK_Perspective.h"; sourceTree = SOURCE_ROOT; };
+9EBA89CFE3634FFB9809419D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Pilotview.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Pilotview.cpp"; path = "CVK_Pilotview.cpp"; sourceTree = SOURCE_ROOT; };
+2CA0EE288C654278A82571B5 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Pilotview.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Pilotview.h"; path = "CVK_Pilotview.h"; sourceTree = SOURCE_ROOT; };
+F0DE882604F54C91B7DF915D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Plane.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Plane.cpp"; path = "CVK_Plane.cpp"; sourceTree = SOURCE_ROOT; };
+C67EC263FD1640509F6755A7 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Plane.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Plane.h"; path = "CVK_Plane.h"; sourceTree = SOURCE_ROOT; };
+DB015E148D0445F6B69DF6B2 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Projection.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Projection.cpp"; path = "CVK_Projection.cpp"; sourceTree = SOURCE_ROOT; };
+A1CBF58D9A594706A8F4F447 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Projection.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Projection.h"; path = "CVK_Projection.h"; sourceTree = SOURCE_ROOT; };
+E695AAA10CAA47EC814B38AC /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderMinimal.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_ShaderMinimal.cpp"; path = "CVK_ShaderMinimal.cpp"; sourceTree = SOURCE_ROOT; };
+98175ED22ADC4936A755FC03 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderMinimal.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_ShaderMinimal.h"; path = "CVK_ShaderMinimal.h"; sourceTree = SOURCE_ROOT; };
+01CDF3E2FBB7412DBF14BB33 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPhong.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_ShaderPhong.cpp"; path = "CVK_ShaderPhong.cpp"; sourceTree = SOURCE_ROOT; };
+02D847A4C8E64270BDB43052 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPhong.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_ShaderPhong.h"; path = "CVK_ShaderPhong.h"; sourceTree = SOURCE_ROOT; };
+8E32035BA66A415D9C83959D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPostProcessing.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_ShaderPostProcessing.cpp"; path = "CVK_ShaderPostProcessing.cpp"; sourceTree = SOURCE_ROOT; };
+C1C266BC27D84DCFB1A9C901 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPostProcessing.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_ShaderPostProcessing.h"; path = "CVK_ShaderPostProcessing.h"; sourceTree = SOURCE_ROOT; };
+DA0FACACE7E345938C471600 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSet.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_ShaderSet.cpp"; path = "CVK_ShaderSet.cpp"; sourceTree = SOURCE_ROOT; };
+F2C6C6CE5684448CBE4B8864 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSet.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_ShaderSet.h"; path = "CVK_ShaderSet.h"; sourceTree = SOURCE_ROOT; };
+F3CA2D0ED9674C86A030BCE5 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSimpleTexture.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_ShaderSimpleTexture.cpp"; path = "CVK_ShaderSimpleTexture.cpp"; sourceTree = SOURCE_ROOT; };
+F0362EFC2C364031A6C89932 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSimpleTexture.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_ShaderSimpleTexture.h"; path = "CVK_ShaderSimpleTexture.h"; sourceTree = SOURCE_ROOT; };
+9DD26BA8D3764861A63E00E1 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Sphere.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Sphere.cpp"; path = "CVK_Sphere.cpp"; sourceTree = SOURCE_ROOT; };
+78BC3C6682D64C4DBB6F5B10 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Sphere.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Sphere.h"; path = "CVK_Sphere.h"; sourceTree = SOURCE_ROOT; };
+791E266BD49D403B9D5EFE66 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_State.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_State.cpp"; path = "CVK_State.cpp"; sourceTree = SOURCE_ROOT; };
+FC82609AB2D54E768528F4F0 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_State.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_State.h"; path = "CVK_State.h"; sourceTree = SOURCE_ROOT; };
+DA44D4B6FC7242D98582B3B2 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Teapot.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Teapot.cpp"; path = "CVK_Teapot.cpp"; sourceTree = SOURCE_ROOT; };
+5181AA4573CF4FD6B2D608BD /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Teapot.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Teapot.h"; path = "CVK_Teapot.h"; sourceTree = SOURCE_ROOT; };
+52AEB48641794D4BAECFB3FB /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Texture.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Texture.cpp"; path = "CVK_Texture.cpp"; sourceTree = SOURCE_ROOT; };
+FEC686FCEA4A49D0ADB770A8 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Texture.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Texture.h"; path = "CVK_Texture.h"; sourceTree = SOURCE_ROOT; };
+5485F42B7F84423DBE395FB6 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Trackball.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Trackball.cpp"; path = "CVK_Trackball.cpp"; sourceTree = SOURCE_ROOT; };
+EED3B9032F9F47929795A7BA /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Trackball.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Trackball.h"; path = "CVK_Trackball.h"; sourceTree = SOURCE_ROOT; };
+9FF106160DA44CBC8982F2B5 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Triangle.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "CVK_Triangle.cpp"; path = "CVK_Triangle.cpp"; sourceTree = SOURCE_ROOT; };
+9BD1D131DB3245F8923A5CBE /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Triangle.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "CVK_Triangle.h"; path = "CVK_Triangle.h"; sourceTree = SOURCE_ROOT; };
+CB3E667C0B5B465DB3562878 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/Teapot.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "Teapot.h"; path = "Teapot.h"; sourceTree = SOURCE_ROOT; };
+6F57E65042824B0CA48E4ACB /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/stb_image.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "stb_image.cpp"; path = "stb_image.cpp"; sourceTree = SOURCE_ROOT; };
+88845E661D5D4F859D6A7C39 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/stb_image.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "stb_image.h"; path = "stb_image.h"; sourceTree = SOURCE_ROOT; };
+D8BFC8AFFFDA4516BEC41976 /* CVK_2 */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "libCVK_2.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+4674686CB16B4F60B364E0EC /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              327F359846184F8198FA5FA4  = {
+                     isa = PBXGroup;
+                     children = (
+                            6D62EB1CD82D4C919E9DBCB5 /* Sources */,
+                            CC5440D3C25546F1840B975A /* Resources */,
+                            C0EDDC0D429A4C7C8C0CC4ED /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              6D62EB1CD82D4C919E9DBCB5 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            2D0DA2BA77894ABAABAB5531 /* CVK_2 */,
+                            9650A773D57B484880FBE190 /* ALL_BUILD */,
+                            F1EB7B8CC12C44809DAD872C /* ZERO_CHECK */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              CC5440D3C25546F1840B975A /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              2D0DA2BA77894ABAABAB5531 /* CVK_2 */ = {
+                     isa = PBXGroup;
+                     children = (
+                            C8003E014A9045A7B34E9DAC /* Source Files */,
+                            EB32B500853844C4850A6D2A /* Header Files */,
+                            0C341C2956CF433CB8893128 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CMakeLists.txt */,
+                     );
+                     name = CVK_2;
+                     sourceTree = "<group>";
+              };
+              C8003E014A9045A7B34E9DAC /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            2D94D754E7FA422083D2A29E /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Camera.cpp */,
+                            BC21A7B6681A4D19B1416325 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CompatibilityTools.cpp */,
+                            DA04687F7EF348319157CB2C /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cone.cpp */,
+                            E78FC6336A0C4CA2B7F6B8C0 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cube.cpp */,
+                            561988A3ACC84AE6BC1B1D9A /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CubeMapTexture.cpp */,
+                            710D1B4768F246DF9A5726DD /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_FBO.cpp */,
+                            98E28B9619394025A9566778 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Geometry.cpp */,
+                            188A80D3848243658BFA4E16 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Light.cpp */,
+                            5F1C880DB03A4A4CB57062D6 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Material.cpp */,
+                            248C8FE683554947925A976F /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Node.cpp */,
+                            EEEC0616C6894C1497544670 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Ortho.cpp */,
+                            9A439E3B2B06435EAD7A0E65 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Perspective.cpp */,
+                            9EBA89CFE3634FFB9809419D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Pilotview.cpp */,
+                            F0DE882604F54C91B7DF915D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Plane.cpp */,
+                            DB015E148D0445F6B69DF6B2 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Projection.cpp */,
+                            E695AAA10CAA47EC814B38AC /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderMinimal.cpp */,
+                            01CDF3E2FBB7412DBF14BB33 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPhong.cpp */,
+                            8E32035BA66A415D9C83959D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPostProcessing.cpp */,
+                            DA0FACACE7E345938C471600 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSet.cpp */,
+                            F3CA2D0ED9674C86A030BCE5 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSimpleTexture.cpp */,
+                            9DD26BA8D3764861A63E00E1 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Sphere.cpp */,
+                            791E266BD49D403B9D5EFE66 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_State.cpp */,
+                            DA44D4B6FC7242D98582B3B2 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Teapot.cpp */,
+                            52AEB48641794D4BAECFB3FB /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Texture.cpp */,
+                            5485F42B7F84423DBE395FB6 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Trackball.cpp */,
+                            9FF106160DA44CBC8982F2B5 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Triangle.cpp */,
+                            6F57E65042824B0CA48E4ACB /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/stb_image.cpp */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              EB32B500853844C4850A6D2A /* Header Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            CB011D498383452AB3EF74A9 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Camera.h */,
+                            3C05F083546F44F3A94D4A61 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CompatibilityTools.h */,
+                            D51E4AD2D31E4A7AB91C60E3 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cone.h */,
+                            5827F03FDA5F4E74882896BF /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cube.h */,
+                            9A00788B011341D5B53129D9 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CubeMapTexture.h */,
+                            2F9A1D7721AD412B80EC1A8D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Defs.h */,
+                            798E45303B6048198148A87A /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_FBO.h */,
+                            92C85668BF2E46B38ADCC087 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Framework.h */,
+                            56E3375B7D4E4E479923F282 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Geometry.h */,
+                            DF60B8422F3349C6B0971834 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Light.h */,
+                            7044967AD77C4A30BB4AB834 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Material.h */,
+                            C689DB37956E461A9C025696 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Node.h */,
+                            8E46716153ED4CC3B736BF89 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Ortho.h */,
+                            1B80BAF7C577413EB953C7C0 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Perspective.h */,
+                            2CA0EE288C654278A82571B5 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Pilotview.h */,
+                            C67EC263FD1640509F6755A7 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Plane.h */,
+                            A1CBF58D9A594706A8F4F447 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Projection.h */,
+                            98175ED22ADC4936A755FC03 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderMinimal.h */,
+                            02D847A4C8E64270BDB43052 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPhong.h */,
+                            C1C266BC27D84DCFB1A9C901 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPostProcessing.h */,
+                            F2C6C6CE5684448CBE4B8864 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSet.h */,
+                            F0362EFC2C364031A6C89932 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSimpleTexture.h */,
+                            78BC3C6682D64C4DBB6F5B10 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Sphere.h */,
+                            FC82609AB2D54E768528F4F0 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_State.h */,
+                            5181AA4573CF4FD6B2D608BD /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Teapot.h */,
+                            FEC686FCEA4A49D0ADB770A8 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Texture.h */,
+                            EED3B9032F9F47929795A7BA /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Trackball.h */,
+                            9BD1D131DB3245F8923A5CBE /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Triangle.h */,
+                            CB3E667C0B5B465DB3562878 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/Teapot.h */,
+                            88845E661D5D4F859D6A7C39 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/stb_image.h */,
+                     );
+                     name = "Header Files";
+                     sourceTree = "<group>";
+              };
+              9650A773D57B484880FBE190 /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            78EAF1D1F92D413A952F3D51 /* CMake Rules */,
+                            6619D99C904E4E5090F027F7 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              78EAF1D1F92D413A952F3D51 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              F1EB7B8CC12C44809DAD872C /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            BF76B9F51F29497DAA4D0D8A /* CMake Rules */,
+                            4674686CB16B4F60B364E0EC /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              BF76B9F51F29497DAA4D0D8A /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              C0EDDC0D429A4C7C8C0CC4ED /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            D8BFC8AFFFDA4516BEC41976 /* CVK_2 */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              53D9BE5893584F8DB2681EF2 /* CVK_2 */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = B681AF7C25B64B26B9840ABE /* Build configuration list for PBXNativeTarget "CVK_2" */;
+                     buildPhases = (
+                            9ABA76FC97244C979EE31B47 /* Sources */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                     );
+                     name = CVK_2;
+                     productName = CVK_2;
+                     productReference = D8BFC8AFFFDA4516BEC41976 /* CVK_2 */;
+                     productType = "com.apple.product-type.library.static";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              ED507E0F356D4E7CBD091736 /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = 5B44D38572E4480497737020 /* Build configuration list for PBXProject  "CVK_2" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            5BA8FE975629433986E31935 /* Debug */,
+                            14A0DB101F1046D38282B18D /* Release */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = 327F359846184F8198FA5FA4;
+                     projectDirPath = /Users/benutzer/Documents/anSim/framework/libraries/CVK_2;
+                     projectRoot = "";
+                     targets = (
+                            4C066FA9B15A4ACCAB9F7C63 /* ALL_BUILD */,
+                            53D9BE5893584F8DB2681EF2 /* CVK_2 */,
+                            91C91DD9FB7B4C738E0FC048 /* ZERO_CHECK */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              94B13B130E094BDEAEFB778D /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              5F213E4DCD014A338FFEF790 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_2 -f /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_2/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              1AEA26DEB0A5459FA8C0BCE9 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              45F32BB7C3454D6D863A8CBA /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_2 -f /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_2/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              9ABA76FC97244C979EE31B47 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            742BED797C414B2CB46C43A6 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Camera.cpp */,
+                            6E9F5E7F4A274D4F9D2CA575 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CompatibilityTools.cpp */,
+                            42E8A12DB4AF441C91ECBCA6 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cone.cpp */,
+                            08D30CED8772408CB7601E8C /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Cube.cpp */,
+                            28071486665F42FAAF58F831 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_CubeMapTexture.cpp */,
+                            D70F343C1DB44492A941D883 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_FBO.cpp */,
+                            4730599D2C2541D6941E629C /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Geometry.cpp */,
+                            85E721FB3BBF4626970D66CF /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Light.cpp */,
+                            A5918CA14A71445F9556DA8D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Material.cpp */,
+                            D2315D917913402CB7B8DD69 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Node.cpp */,
+                            E6685C84CC6E4FFEA96C7906 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Ortho.cpp */,
+                            F56B6DF5CD1643BD851CDFF4 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Perspective.cpp */,
+                            69FCA77BB9ED4AF091D029BA /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Pilotview.cpp */,
+                            67F1BD70DFD8413CB685A21D /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Plane.cpp */,
+                            7347D94B2FEF45998DA9DA13 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Projection.cpp */,
+                            F0B52EA076C24D84A889F573 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderMinimal.cpp */,
+                            C1283D56BC7948B98E567DF0 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPhong.cpp */,
+                            D66ACADB2D2B4632A527EC86 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderPostProcessing.cpp */,
+                            AF0F467208184768989E9BEA /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSet.cpp */,
+                            B79F4C27F1F74CEC96CB4ED7 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_ShaderSimpleTexture.cpp */,
+                            1E37B6685DF24C4087E543EE /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Sphere.cpp */,
+                            BFC75DFAA99E45939D155452 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_State.cpp */,
+                            6A4AD603AB25406FA77E85BA /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Teapot.cpp */,
+                            12C8A315D08A4B248664E5D5 /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Texture.cpp */,
+                            0EF6D4A9918745088EF794AD /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Trackball.cpp */,
+                            FE289858B30E4297A42A744B /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/CVK_Triangle.cpp */,
+                            2BCDEC2F5A824CE0B2F1FA0A /* /Users/benutzer/Documents/anSim/framework/libraries/CVK_2/stb_image.cpp */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              34EA2203E9EB4A7E953097EC /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 53D9BE5893584F8DB2681EF2 /* CVK_2 */;
+                     targetProxy = FF5D850EE634411BA2B6E20A /* PBXContainerItemProxy */;
+              };
+              EE9EF3DC7A4C430880C4DA96 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 91C91DD9FB7B4C738E0FC048 /* ZERO_CHECK */;
+                     targetProxy = 00B9E3A23EE940B097033D05 /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              0C0E834D15EB4EF5A16FFB4D /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_2/build;
+                     };
+                     name = Debug;
+              };
+              529D4AA6EF924646A7E19262 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_2/build;
+                     };
+                     name = Release;
+              };
+              BE4C4C8880BB4DD894A30EDA /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            FRAMEWORK_SEARCH_PATHS = ("/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'SHADERS_PATH=\"/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders\"'", "'RESOURCES_PATH=\"/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/../../resources\"'", GLFW_INCLUDE_GLCOREARB, GLEW_STATIC, GL_DO_NOT_WARN_IF_MULTI_GL_VERSION_HEADERS_INCLUDED, GLEW_NO_GLU, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/opt/local/include, /Users/benutzer/Documents/anSim/dependencies_osx/glfw/include, /Users/benutzer/Documents/anSim/dependencies_osx/assimp/include, /Users/benutzer/Documents/anSim/dependencies_osx/glm, "/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/../../libraries", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_2;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+                     };
+                     name = Debug;
+              };
+              A8B2A10ABA4D4E8AB2D7D46D /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            FRAMEWORK_SEARCH_PATHS = ("/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'SHADERS_PATH=\"/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders\"'", "'RESOURCES_PATH=\"/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/../../resources\"'", GLFW_INCLUDE_GLCOREARB, GLEW_STATIC, GL_DO_NOT_WARN_IF_MULTI_GL_VERSION_HEADERS_INCLUDED, GLEW_NO_GLU, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/opt/local/include, /Users/benutzer/Documents/anSim/dependencies_osx/glfw/include, /Users/benutzer/Documents/anSim/dependencies_osx/assimp/include, /Users/benutzer/Documents/anSim/dependencies_osx/glm, "/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/../../libraries", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_2;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+                     };
+                     name = Release;
+              };
+              51930794A217484B9ADBD4F6 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/lib/Debug;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            FRAMEWORK_SEARCH_PATHS = ("/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'SHADERS_PATH=\"/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders\"'", "'RESOURCES_PATH=\"/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/../../resources\"'", GLFW_INCLUDE_GLCOREARB, GLEW_STATIC, GL_DO_NOT_WARN_IF_MULTI_GL_VERSION_HEADERS_INCLUDED, GLEW_NO_GLU, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/opt/local/include, /Users/benutzer/Documents/anSim/dependencies_osx/glfw/include, /Users/benutzer/Documents/anSim/dependencies_osx/assimp/include, /Users/benutzer/Documents/anSim/dependencies_osx/glm, "/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/../../libraries", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "    ";
+                            OTHER_CPLUSPLUSFLAGS = " -std=c++0x     ";
+                            OTHER_LIBTOOLFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = CVK_2;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_2;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+                     };
+                     name = Debug;
+              };
+              AB9F233D46F54716B1A3ED40 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            CONFIGURATION_BUILD_DIR = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/lib/Release;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            FRAMEWORK_SEARCH_PATHS = ("/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'SHADERS_PATH=\"/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders\"'", "'RESOURCES_PATH=\"/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/../../resources\"'", GLFW_INCLUDE_GLCOREARB, GLEW_STATIC, GL_DO_NOT_WARN_IF_MULTI_GL_VERSION_HEADERS_INCLUDED, GLEW_NO_GLU, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/opt/local/include, /Users/benutzer/Documents/anSim/dependencies_osx/glfw/include, /Users/benutzer/Documents/anSim/dependencies_osx/assimp/include, /Users/benutzer/Documents/anSim/dependencies_osx/glm, "/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/../../libraries", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "    -DNDEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = " -std=c++0x     -DNDEBUG  ";
+                            OTHER_LIBTOOLFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = CVK_2;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_2;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+                     };
+                     name = Release;
+              };
+              557B35BE6E52483E9B5B696A /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            FRAMEWORK_SEARCH_PATHS = ("/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'SHADERS_PATH=\"/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders\"'", "'RESOURCES_PATH=\"/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/../../resources\"'", GLFW_INCLUDE_GLCOREARB, GLEW_STATIC, GL_DO_NOT_WARN_IF_MULTI_GL_VERSION_HEADERS_INCLUDED, GLEW_NO_GLU, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/opt/local/include, /Users/benutzer/Documents/anSim/dependencies_osx/glfw/include, /Users/benutzer/Documents/anSim/dependencies_osx/assimp/include, /Users/benutzer/Documents/anSim/dependencies_osx/glm, "/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/../../libraries", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_2;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+                     };
+                     name = Debug;
+              };
+              0DE4F5D0AE82447FA94F7A07 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            FRAMEWORK_SEARCH_PATHS = ("/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks", );
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", "'SHADERS_PATH=\"/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/shaders\"'", "'RESOURCES_PATH=\"/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/../../resources\"'", GLFW_INCLUDE_GLCOREARB, GLEW_STATIC, GL_DO_NOT_WARN_IF_MULTI_GL_VERSION_HEADERS_INCLUDED, GLEW_NO_GLU, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/opt/local/include, /Users/benutzer/Documents/anSim/dependencies_osx/glfw/include, /Users/benutzer/Documents/anSim/dependencies_osx/assimp/include, /Users/benutzer/Documents/anSim/dependencies_osx/glm, "/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/src/../../libraries", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_2;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+                     };
+                     name = Release;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              5B44D38572E4480497737020 /* Build configuration list for PBXProject  "CVK_2" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            0C0E834D15EB4EF5A16FFB4D /* Debug */,
+                            529D4AA6EF924646A7E19262 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              5B986AC01A344636ABF9F72A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            BE4C4C8880BB4DD894A30EDA /* Debug */,
+                            A8B2A10ABA4D4E8AB2D7D46D /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              B681AF7C25B64B26B9840ABE /* Build configuration list for PBXNativeTarget "CVK_2" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            51930794A217484B9ADBD4F6 /* Debug */,
+                            AB9F233D46F54716B1A3ED40 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              947F913472734A2D8FEFB50F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            557B35BE6E52483E9B5B696A /* Debug */,
+                            0DE4F5D0AE82447FA94F7A07 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = ED507E0F356D4E7CBD091736;
+}
