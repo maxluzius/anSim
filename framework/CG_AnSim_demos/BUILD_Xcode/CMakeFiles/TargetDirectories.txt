@@ -1,7 +1,0 @@
-/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_2/CMakeFiles/CVK_2.dir
-/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/executables/assignment/CMakeFiles/assignment.dir
-/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/shaders/CMakeFiles/SHADERS.dir
-/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/rollercoaster/CMakeFiles/ALL_BUILD.dir
-/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/CVK_AnSim/CMakeFiles/CVK_AnSim.dir
-/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/rollercoaster/CMakeFiles/rollercoaster.dir
-/Users/benutzer/Documents/anSim/framework/CG_AnSim_demos/BUILD_Xcode/libraries/rollercoaster/CMakeFiles/ZERO_CHECK.dir
