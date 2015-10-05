@@ -83,6 +83,7 @@ void updateTeapot(float d_t)
 {
 		timeRunning += d_t;
 
+
 	if((position <140 || position > 150) && position < 200) {
 		// Gravity Force
 		float dot = down.x * curTangent.x + down.y * curTangent.y + down.z * curTangent.z;
@@ -102,6 +103,11 @@ void updateTeapot(float d_t)
 	}
 	else
 		speed = 5.0;
+
+	if (glfwGetKey( window, GLFW_KEY_COMMA) == GLFW_PRESS)
+		speed -= 1.0;
+	if (glfwGetKey( window, GLFW_KEY_PERIOD) == GLFW_PRESS)
+		speed += 1.0;
 
 	position += d_t * speed;
 
@@ -184,7 +190,7 @@ void init_materials()
     mat_green = new CVK::Material(1.0f, Green);
     mat_tex = new CVK::Material((char*)RESOURCES_PATH "/cubeMap2/_deserted_bottom.jpg", 1.0f, 0.0f, glm::vec3(0.0f, 0.0f, 0.0f), 0.0f);
 
-	mat_rail = new CVK::Material(SteelBlue, white, shininess);
+	mat_rail = new CVK::Material(SteelBlue, white, 10000.0f);
 	mat_pillars = new CVK::Material(darkgrey, grey, shininess);
 
 }
@@ -373,7 +379,7 @@ int main()
 
 		//define Light uniforms
 		CVK::State::getInstance()->setLight( 0, plight);
-		CVK::State::getInstance()->setLight( 1, plight1);
+		CVK::State::getInstance()->setLight( 0, plight1);
 
         if(showSkyBox)
         {
