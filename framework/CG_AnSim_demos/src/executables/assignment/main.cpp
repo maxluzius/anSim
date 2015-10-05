@@ -373,7 +373,7 @@ int main()
 
 		//define Light uniforms
 		CVK::State::getInstance()->setLight( 0, plight);
-		CVK::State::getInstance()->setLight( 0, plight1);
+		CVK::State::getInstance()->setLight( 1, plight1);
 
         if(showSkyBox)
         {
