@@ -39,7 +39,6 @@ CVK::Material *mat_pillars;
 float shininess = 100.0f;
 
 //define objects
-CVK::Node* 			scene_node;
 CVK::Rail* 			rail;
 CVK::Pillars* 		pillar;
 CVK::HermiteSpline* mPath;

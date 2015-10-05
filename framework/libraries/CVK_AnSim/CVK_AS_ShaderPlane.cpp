@@ -19,7 +19,6 @@ void CVK::ShaderPlane::update(CVK::Node *node)
     
     if( node->hasMaterial())
     {
-        std::cout<<"YES"<<std::endl;
         CVK::Material* mat = node->getMaterial();
         CVK::Texture *color_texture;
         
@@ -30,7 +29,6 @@ void CVK::ShaderPlane::update(CVK::Node *node)
         if (colorTexture)
         {
             //TODO: COLOR_TEXTURE_UNIT
-            std::cout<<"YES2"<<std::endl;
             glUniform1i( m_colorTextureID, 0);
             
             glActiveTexture(COLOR_TEXTURE_UNIT);

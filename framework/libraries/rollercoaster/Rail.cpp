@@ -12,7 +12,7 @@
 #define rad 0.05   //r0.05 radius of the track
 #define circle 36  //36 for every 10 degrees we calculate a point
 #define hight 0.45 //0.45 distance of the middle rail from the two beside it
-#define distance 4 //4 distance of each rail from the one in the middle
+#define distance 3 //4 distance of each rail from the one in the middle
 
 
 CVK::Rail::Rail()
