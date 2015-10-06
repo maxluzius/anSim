@@ -59,7 +59,7 @@ bool pressed	= false;
 //*************************************************************************************************************
 float timeRunning 	= 0.0f;
 float position 		= 0.0f;
-float speed 		= 5.0f;
+float speed 		= 5.6f;
 glm::vec3 renderPosition 	= glm::vec3(0.0f,0.0f,0.0f);
 glm::vec3 tangent 		= glm::vec3(1.0f,0.0f,0.0f);
 glm::vec3 normal		= glm::vec3(0.0f,1.0f,0.0f);
@@ -84,7 +84,7 @@ void updateTeapot(float d_t)
 		timeRunning += d_t;
 
 
-	if((position <140 || position > 150) && position < 200) {
+	if((position <138 || position > 150) && position < 200) {
 		// Gravity Force
 		float dot = down.x * curTangent.x + down.y * curTangent.y + down.z * curTangent.z;
 		float cosA = dot / (down.length() * curTangent.length());
@@ -95,7 +95,7 @@ void updateTeapot(float d_t)
 		dot = down.x * curUp.x + down.y * curUp.y + down.z * curUp.z;
 		cosA = dot / (down.length() * curUp.length());
 		F_n = F_g * cosA;
-		F += 11 * wheels * (F_n * (b / r));
+		F += 12 * wheels * (F_n * (b / r));
 
 		// calculate all the acceleration from sum of forces F
 		teapot_acceleration = F / teapot_mass;
@@ -109,7 +109,7 @@ void updateTeapot(float d_t)
 	if (glfwGetKey( window, GLFW_KEY_PERIOD) == GLFW_PRESS)
 		speed += 1.0;
 
-	position += d_t * speed;
+	position += d_t * speed + 0.5 * teapot_acceleration * d_t * d_t;
 
 
 	float u;
